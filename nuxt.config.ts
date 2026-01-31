@@ -27,5 +27,13 @@ export default defineNuxtConfig({
         weights: [400, 500, 600, 700]
       }
     ]
+  },
+  studio: {
+    repository: {
+      provider: 'github',
+      owner: 'schellingpoint21',
+      repo: 'schellingpoint',
+      branch: 'main'
+    }
   }
 })
