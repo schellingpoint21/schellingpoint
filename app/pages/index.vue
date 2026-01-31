@@ -1,3 +1,5 @@
 <template>
-  <h1 class="font-bold text-blue-500">Hello</h1>
+  <div class="flex items-center justify-center min-h-screen">
+    <h1 class="font-bold text-primary text-3xl">Schelling Point</h1>
+  </div>
 </template>
