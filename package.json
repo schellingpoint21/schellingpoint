@@ -2,9 +2,10 @@
   "name": "schellingpoint",
   "type": "module",
   "private": true,
+  "packageManager": "pnpm@10.29.3",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev --port 3332",
+    "dev": "nuxt dev --dotenv .env.local --port 3332",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
