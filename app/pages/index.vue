@@ -908,49 +908,49 @@
             class="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5"
           >
             <div class="size-6 rounded-full bg-muted" />
-            <span class="text-sm font-medium text-white"
-              >{{ t('tools.sparrow') }}</span
-            >
+            <span class="text-sm font-medium text-white">
+              {{ t('tools.sparrow') }}
+            </span>
+          </div>
+          <div
+            class="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5"
+          >
+            <div class="size-6 rounded-full bg-muted" />
+            <span class="text-sm font-medium text-white">
+              {{ t('tools.seedsigner') }}
+            </span>
+          </div>
+          <div
+            class="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5"
+          >
+            <div class="size-6 rounded-full bg-muted" />
+            <span class="text-sm font-medium text-white">
+              {{ t('tools.coldcard') }}
+            </span>
           </div>
           <div
             class="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5"
           >
             <div class="size-6 rounded-full bg-muted" />
             <span class="text-sm font-medium text-white"
-              >{{ t('tools.seedsigner') }}</span
-            >
+              >{{ t('tools.krux') }}
+            </span>
           </div>
           <div
             class="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5"
           >
             <div class="size-6 rounded-full bg-muted" />
-            <span class="text-sm font-medium text-white"
-              >{{ t('tools.coldcard') }}</span
-            >
+            <span class="text-sm font-medium text-white">
+              {{ t('tools.passport') }}
+            </span>
           </div>
           <div
             class="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5"
           >
             <div class="size-6 rounded-full bg-muted" />
-            <span class="text-sm font-medium text-white"
-              >{{ t('tools.krux') }}</span
-            >
-          </div>
-          <div
-            class="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5"
-          >
-            <div class="size-6 rounded-full bg-muted" />
-            <span class="text-sm font-medium text-white"
-              >{{ t('tools.passport') }}</span
-            >
-          </div>
-          <div
-            class="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5"
-          >
-            <div class="size-6 rounded-full bg-muted" />
-            <span class="text-sm font-medium text-white"
-              >{{ t('tools.jade') }}</span
-            >
+            <span class="text-sm font-medium text-white">
+              {{ t('tools.jade') }}
+            </span>
           </div>
         </div>
         <p class="mt-8 text-sm text-muted-foreground">{{ t('tools.note') }}</p>
@@ -1011,7 +1011,9 @@
     <section id="faq" class="px-6 pb-20">
       <div class="mx-auto max-w-3xl">
         <h2 class="text-center text-4xl font-bold">{{ t('faq.heading') }}</h2>
-        <div class="mt-12"><FaqAccordion /></div>
+        <div class="mt-12">
+          <FaqAccordion />
+        </div>
       </div>
     </section>
   </div>
