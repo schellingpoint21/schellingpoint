@@ -86,4 +86,8 @@
   body {
     @apply bg-background text-foreground font-sans;
   }
+  #__nuxt,
+  #__nuxt > div {
+    @apply flex min-h-screen flex-col;
+  }
 }
