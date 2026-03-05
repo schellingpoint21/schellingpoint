@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     'shadcn-nuxt',
     '@vueuse/nuxt',
-    'nuxt-studio'
+    'nuxt-studio',
+    '@nuxtjs/i18n'
   ],
   css: ['~/assets/css/tailwind.css'],
   vite: {
@@ -34,6 +35,20 @@ export default defineNuxtConfig({
       owner: 'schellingpoint21',
       repo: 'schellingpoint',
       branch: 'main'
+    }
+  },
+  i18n: {
+    defaultLocale: 'en',
+    locales: [
+      { code: 'en', file: 'en.json', name: 'English' },
+      { code: 'es', file: 'es.json', name: 'Español' }
+    ],
+    langDir: 'locales',
+    strategy: 'prefix_except_default'
+  },
+  router: {
+    options: {
+      scrollBehaviorType: 'smooth'
     }
   }
 })

@@ -15,6 +15,9 @@
     "rules": {
       "correctness": {
         "noUndeclaredVariables": "off"
+      },
+      "style": {
+        "useFilenamingConvention": "off"
       }
     }
   }
