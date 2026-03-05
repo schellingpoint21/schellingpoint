@@ -74,7 +74,7 @@
           >
             {{ t('hero.description') }}
           </p>
-          <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+          <div class="mt-8 flex flex-col gap-8 sm:flex-row sm:items-center">
             <UiButton
               class="h-auto rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-white hover:bg-primary/90"
             >
