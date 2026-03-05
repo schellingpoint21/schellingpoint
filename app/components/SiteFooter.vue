@@ -155,8 +155,11 @@
       </div>
 
       <!-- Bottom bar -->
-      <div class="mt-10 border-t border-border pt-6 text-center">
+      <div
+        class="mt-10 flex items-center justify-between border-t border-border pt-6"
+      >
         <p class="text-xs text-muted-foreground">{{ t('footer.rights') }}</p>
+        <LanguageSwitcher />
       </div>
     </div>
   </footer>

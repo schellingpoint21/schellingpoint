@@ -53,6 +53,7 @@
           >
             {{ t('nav.getStarted') }}
           </UiButton>
+          <LanguageSwitcher />
         </div>
       </nav>
     </header>
@@ -1010,9 +1011,7 @@
     <section id="faq" class="px-6 pb-20">
       <div class="mx-auto max-w-3xl">
         <h2 class="text-center text-4xl font-bold">{{ t('faq.heading') }}</h2>
-        <div class="mt-12">
-          <FaqAccordion />
-        </div>
+        <div class="mt-12"><FaqAccordion /></div>
       </div>
     </section>
   </div>
