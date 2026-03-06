@@ -49,6 +49,10 @@
       {{ note }}
     </p>
     <UiButton
+      as="a"
+      href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+      target="_blank"
+      rel="noopener"
       class="mt-6 w-full rounded-full text-sm font-medium"
       :class="
         highlighted

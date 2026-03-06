@@ -3,7 +3,44 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineNuxtConfig({
   app: {
     head: {
-      link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
+      link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
+      meta: [
+        {
+          name: 'description',
+          content: 'Self custody with the right tools, training, and protocols.'
+        },
+        { property: 'og:type', content: 'website' },
+        {
+          property: 'og:title',
+          content: 'Schelling Point — Bitcoin Estate Planning'
+        },
+        {
+          property: 'og:description',
+          content: 'Self custody with the right tools, training, and protocols.'
+        },
+        {
+          property: 'og:image',
+          content: 'https://schellingpoint.lat/og-image.png'
+        },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
+        { property: 'og:url', content: 'https://schellingpoint.lat' },
+        { property: 'og:site_name', content: 'Schelling Point' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        {
+          name: 'twitter:title',
+          content: 'Schelling Point — Bitcoin Estate Planning'
+        },
+        {
+          name: 'twitter:description',
+          content: 'Self custody with the right tools, training, and protocols.'
+        },
+        {
+          name: 'twitter:image',
+          content: 'https://schellingpoint.lat/og-image.png'
+        }
+      ],
+      title: 'Schelling Point — Bitcoin Estate Planning'
     }
   },
   compatibilityDate: '2025-07-15',

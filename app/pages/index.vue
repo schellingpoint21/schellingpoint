@@ -1,5 +1,15 @@
 <script setup lang="ts">
+  import { Blocks, Menu, RotateCcw, ShieldAlert } from 'lucide-vue-next'
+
   const { t } = useI18n()
+  const mobileMenuOpen = ref(false)
+
+  const scrollToSection = (hash: string) => {
+    mobileMenuOpen.value = false
+    setTimeout(() => {
+      document.querySelector(hash)?.scrollIntoView({ behavior: 'smooth' })
+    }, 350)
+  }
 
   const whatsappUrl = computed(() => {
     const message = encodeURIComponent(t('common.whatsappMessage'))
@@ -49,12 +59,67 @@
             {{ t('nav.blog') }}
           </NuxtLink>
           <UiButton
+            as="a"
+            href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+            target="_blank"
+            rel="noopener"
             class="rounded-full bg-primary px-5 text-sm text-white hover:bg-primary/90"
           >
             {{ t('nav.getStarted') }}
           </UiButton>
           <LanguageSwitcher />
         </div>
+
+        <!-- Mobile hamburger -->
+        <UiSheet v-model:open="mobileMenuOpen">
+          <UiSheetTrigger as-child>
+            <button class="md:hidden" aria-label="Open menu">
+              <Menu class="size-6 text-white" />
+            </button>
+          </UiSheetTrigger>
+          <UiSheetContent side="right" class="flex flex-col gap-6 p-6">
+            <UiSheetTitle class="sr-only">Menu</UiSheetTitle>
+            <nav class="mt-8 flex flex-col gap-6">
+              <NuxtLink
+                to="/"
+                class="text-lg text-white transition-colors hover:text-white/70"
+                @click="mobileMenuOpen = false"
+              >
+                {{ t('nav.home') }}
+              </NuxtLink>
+              <button
+                class="text-left text-lg text-white/70 transition-colors hover:text-white"
+                @click="scrollToSection('#packages')"
+              >
+                {{ t('nav.packages') }}
+              </button>
+              <button
+                class="text-left text-lg text-white/70 transition-colors hover:text-white"
+                @click="scrollToSection('#faq')"
+              >
+                {{ t('nav.faq') }}
+              </button>
+              <NuxtLink
+                to="/blog"
+                class="text-lg text-white/70 transition-colors hover:text-white"
+                @click="mobileMenuOpen = false"
+              >
+                {{ t('nav.blog') }}
+              </NuxtLink>
+              <UiButton
+                as="a"
+                href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+                target="_blank"
+                rel="noopener"
+                class="rounded-full bg-primary px-5 text-sm text-white hover:bg-primary/90"
+                @click="mobileMenuOpen = false"
+              >
+                {{ t('nav.getStarted') }}
+              </UiButton>
+              <LanguageSwitcher />
+            </nav>
+          </UiSheetContent>
+        </UiSheet>
       </nav>
     </header>
 
@@ -76,6 +141,10 @@
           </p>
           <div class="mt-8 flex flex-col gap-8 sm:flex-row sm:items-center">
             <UiButton
+              as="a"
+              href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+              target="_blank"
+              rel="noopener"
               class="h-auto rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-white hover:bg-primary/90"
             >
               {{ t('nav.getStarted') }}
@@ -198,7 +267,9 @@
             {{ t('rightWay.title2') }}
           </h2>
           <a
-            href="#"
+            href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+            target="_blank"
+            rel="noopener"
             class="flex items-center gap-2 text-sm text-primary transition-colors hover:text-[#96C971]"
           >
             {{ t('rightWay.getStarted') }}
@@ -222,9 +293,9 @@
                 <br>
                 <strong class="font-semibold text-white"
                   >{{ t('rightWay.spending') }}</strong
-                >,<strong class="font-semibold text-white"
-                  >{{ t('rightWay.savings') }}</strong
-                >, and
+                >, <strong class="font-semibold text-white">
+                  {{ t('rightWay.savings') }}
+                </strong>, and
                 <strong class="font-semibold text-white"
                   >{{ t('rightWay.vault') }}</strong
                 >
@@ -286,7 +357,9 @@
             {{ t('secondChance.title2') }}
           </h2>
           <a
-            href="#"
+            href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+            target="_blank"
+            rel="noopener"
             class="flex items-center gap-2 text-sm text-primary transition-colors hover:text-[#96C971]"
           >
             {{ t('secondChance.getStarted') }}
@@ -348,7 +421,9 @@
             {{ t('whatWeDo.title2') }}
           </h2>
           <a
-            href="#"
+            href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+            target="_blank"
+            rel="noopener"
             class="flex items-center gap-2 text-sm text-primary transition-colors hover:text-[#96C971]"
           >
             {{ t('whatWeDo.getStarted') }}
@@ -367,11 +442,20 @@
                 {{ t('whatWeDo.row1b') }}
               </p>
             </div>
-            <div class="h-52 rounded-2xl border border-border bg-card" />
+            <div
+              class="flex h-52 items-center justify-center rounded-2xl border border-border bg-card"
+            >
+              <Blocks class="size-10 text-primary/50" />
+            </div>
           </div>
 
           <!-- Row 2 -->
           <div class="grid gap-4 md:grid-cols-2">
+            <div
+              class="flex h-52 items-center justify-center rounded-2xl border border-border bg-card"
+            >
+              <ShieldAlert class="size-10 text-primary/50" />
+            </div>
             <div
               class="flex flex-col items-center justify-center rounded-2xl border border-border bg-card p-10 text-center"
             >
@@ -379,7 +463,6 @@
                 {{ t('whatWeDo.row2') }}
               </p>
             </div>
-            <div class="h-52 rounded-2xl border border-border bg-card" />
           </div>
 
           <!-- Row 3 -->
@@ -393,7 +476,11 @@
                 <strong>{{ t('whatWeDo.continuity') }}</strong>.
               </p>
             </div>
-            <div class="h-52 rounded-2xl border border-border bg-card" />
+            <div
+              class="flex h-52 items-center justify-center rounded-2xl border border-border bg-card"
+            >
+              <RotateCcw class="size-10 text-primary/50 " />
+            </div>
           </div>
         </div>
       </div>
@@ -409,7 +496,9 @@
             {{ t('framework.heading') }}
           </h2>
           <a
-            href="#"
+            href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+            target="_blank"
+            rel="noopener"
             class="flex items-center gap-2 text-sm text-primary transition-colors hover:text-[#96C971]"
           >
             {{ t('framework.getStarted') }}
@@ -526,7 +615,9 @@
             {{ t('receive.heading') }}
           </h2>
           <a
-            href="#"
+            href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+            target="_blank"
+            rel="noopener"
             class="flex items-center gap-2 text-sm text-primary transition-colors hover:text-[#96C971]"
           >
             {{ t('receive.getStarted') }}
@@ -620,7 +711,9 @@
             {{ t('whoWeAre.heading') }}
           </h2>
           <a
-            href="#"
+            href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+            target="_blank"
+            rel="noopener"
             class="flex items-center gap-2 text-sm text-primary transition-colors hover:text-[#96C971]"
           >
             {{ t('whoWeAre.getStarted') }}
@@ -636,14 +729,15 @@
 
         <div class="grid gap-6 md:grid-cols-5">
           <!-- Founder (3/5 width) -->
-          <div class="relative md:col-span-3">
+          <div class="group relative md:col-span-3">
             <div
               class="aspect-4/3 overflow-hidden rounded-2xl border border-border bg-card"
             >
-              <!-- Image placeholder: founder photo -->
-              <div
-                class="flex h-full items-center justify-center text-sm text-muted-foreground"
-              ><!-- Founder image placeholder --></div>
+              <NuxtImg
+                src="/images/me.jpg"
+                alt="Charlie Stevens, Founder of Schelling Point"
+                class="h-full w-full object-cover brightness-75 transition-all group-hover:brightness-100"
+              />
             </div>
             <!-- Overlay info -->
             <div
@@ -830,6 +924,10 @@
           </div>
           <div class="mt-6">
             <UiButton
+              as="a"
+              href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+              target="_blank"
+              rel="noopener"
               class="rounded-full border border-border bg-transparent px-6 text-sm font-medium text-white hover:bg-white/5"
             >
               {{ t('packages.yearlyCta') }}
@@ -888,6 +986,10 @@
             class="flex flex-col items-center justify-center bg-primary/5 p-8 md:w-72 md:p-10"
           >
             <UiButton
+              as="a"
+              href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+              target="_blank"
+              rel="noopener"
               class="w-full rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-white hover:bg-primary/90"
             >
               {{ t('consulting.cta') }}
@@ -901,13 +1003,19 @@
 
     <!-- SECTION 9: Tools We Support -->
     <section class="px-6 pb-20">
-      <div class="mx-auto max-w-4xl text-center">
+      <div class="mx-auto max-w-4xl text-center flex flex-col items-center">
         <h2 class="text-4xl font-bold">{{ t('tools.heading') }}</h2>
-        <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+        <div
+          class="mt-10 flex flex-wrap items-center justify-center gap-4 max-w-2xl"
+        >
           <div
             class="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5"
           >
-            <div class="size-6 rounded-full bg-muted" />
+            <img
+              src="/images/tools/sparrow.png"
+              alt="Sparrow"
+              class="size-6 rounded-full object-cover"
+            >
             <span class="text-sm font-medium text-white">
               {{ t('tools.sparrow') }}
             </span>
@@ -915,7 +1023,11 @@
           <div
             class="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5"
           >
-            <div class="size-6 rounded-full bg-muted" />
+            <img
+              src="/images/tools/seddsigner.png"
+              alt="SeedSigner"
+              class="size-6 rounded-full object-cover"
+            >
             <span class="text-sm font-medium text-white">
               {{ t('tools.seedsigner') }}
             </span>
@@ -923,7 +1035,11 @@
           <div
             class="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5"
           >
-            <div class="size-6 rounded-full bg-muted" />
+            <img
+              src="/images/tools/coldcard.png"
+              alt="Coldcard"
+              class="size-6 rounded-full object-cover"
+            >
             <span class="text-sm font-medium text-white">
               {{ t('tools.coldcard') }}
             </span>
@@ -931,7 +1047,11 @@
           <div
             class="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5"
           >
-            <div class="size-6 rounded-full bg-muted" />
+            <img
+              src="/images/tools/krux.png"
+              alt="Krux"
+              class="size-6 rounded-full object-cover"
+            >
             <span class="text-sm font-medium text-white"
               >{{ t('tools.krux') }}
             </span>
@@ -939,7 +1059,11 @@
           <div
             class="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5"
           >
-            <div class="size-6 rounded-full bg-muted" />
+            <img
+              src="/images/tools/passport.png"
+              alt="Passport"
+              class="size-6 rounded-full object-cover"
+            >
             <span class="text-sm font-medium text-white">
               {{ t('tools.passport') }}
             </span>
@@ -947,7 +1071,11 @@
           <div
             class="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5"
           >
-            <div class="size-6 rounded-full bg-muted" />
+            <img
+              src="/images/tools/jade.png"
+              alt="Jade"
+              class="size-6 rounded-full object-cover"
+            >
             <span class="text-sm font-medium text-white">
               {{ t('tools.jade') }}
             </span>
@@ -979,6 +1107,10 @@
               class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
             >
               <UiButton
+                as="a"
+                href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+                target="_blank"
+                rel="noopener"
                 class="h-auto rounded-full bg-primary px-8 py-3 text-base font-medium text-white hover:bg-primary/90"
               >
                 {{ t('finalCta.cta') }}
