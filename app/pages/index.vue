@@ -171,7 +171,7 @@
               href="https://tally.so/r/NpVjPb"
               target="_blank"
               rel="noopener"
-              class="flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-white"
+              class="h-auto rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-white hover:bg-primary/90"
             >
               {{ t('common.takeQuiz') }}
             </a>
@@ -415,7 +415,7 @@
                 href="https://tally.so/r/NpVjPb"
                 target="_blank"
                 rel="noopener"
-                class="mt-4 inline-flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-white"
+                class="mt-4 inline-flex h-auto rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-white hover:bg-primary/90"
               >
                 {{ t('common.takeQuiz') }}
               </a>
@@ -1102,7 +1102,7 @@
             class="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5"
           >
             <img
-              src="/images/tools/nunchuk.svg"
+              src="/images/tools/nunchuk.png"
               alt="Nunchuk"
               class="size-6 rounded-full object-cover"
             >
@@ -1114,7 +1114,7 @@
             class="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5"
           >
             <img
-              src="/images/tools/liana.svg"
+              src="/images/tools/liana.png"
               alt="Liana"
               class="size-6 rounded-full object-cover"
             >
