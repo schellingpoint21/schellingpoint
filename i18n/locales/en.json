@@ -117,7 +117,7 @@
     "implPrice": "395,000 sats",
     "implPriceUsd": "about $395",
     "implFeature1": "Everything in the PDF Plan",
-    "implFeature2": "Live guided implementation sessions",
+    "implFeature2": "Live guided implementation systems x 2",
     "implFeature3": "Practice using your framework",
     "implNote": "If you have a yearly support bundle, receive 25% off implementation sessions.",
     "implCta": "Buy Implementation Package",
@@ -125,7 +125,7 @@
     "optionATitle": "Notification System",
     "optionAPrice": "100,000 sats / year",
     "optionAPriceUsd": "~$100",
-    "optionADesc": "Scheduled reminders & check-ins",
+    "optionADesc": "Scheduled reminders & check-ins for your setup",
     "optionBTitle": "Emergency Continuity",
     "optionBPrice": "300,000 sats / year",
     "optionBPriceUsd": "~$300",
@@ -156,7 +156,10 @@
     "coldcard": "Coldcard",
     "krux": "Krux",
     "passport": "Passport Foundation",
-    "jade": "Jade"
+    "jade": "Jade",
+    "nunchuk": "Nunchuk",
+    "liana": "Liana",
+    "signal": "Signal"
   },
   "finalCta": {
     "heading": "Apply for a Free Strategy Session",
@@ -193,6 +196,7 @@
   "common": {
     "getStarted": "Get started",
     "applyFreeSession": "Apply for a Free Strategy Session",
-    "whatsappMessage": "Hi Schelling Point, I want help building my Bitcoin Estate Plan under my own custody. Here's my situation:"
+    "whatsappMessage": "Hi Schelling Point, I want help building my Bitcoin Estate Plan under my own custody. Here's my situation:",
+    "takeQuiz": "Take Quiz"
   }
 }

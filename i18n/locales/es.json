@@ -117,7 +117,7 @@
     "implPrice": "395,000 sats",
     "implPriceUsd": "aprox. $395",
     "implFeature1": "Todo lo del Plan PDF",
-    "implFeature2": "Sesiones de implementación guiadas en vivo",
+    "implFeature2": "Sistemas de implementación guiados en vivo x 2",
     "implFeature3": "Práctica usando tu marco",
     "implNote": "Si tienes un paquete de soporte anual, recibe 25% de descuento en sesiones de implementación.",
     "implCta": "Comprar Paquete de Implementación",
@@ -125,7 +125,7 @@
     "optionATitle": "Sistema de Notificación",
     "optionAPrice": "100,000 sats / año",
     "optionAPriceUsd": "~$100",
-    "optionADesc": "Recordatorios programados y seguimiento",
+    "optionADesc": "Recordatorios programados y seguimiento para tu configuración",
     "optionBTitle": "Continuidad de Emergencia",
     "optionBPrice": "300,000 sats / año",
     "optionBPriceUsd": "~$300",
@@ -156,7 +156,10 @@
     "coldcard": "Coldcard",
     "krux": "Krux",
     "passport": "Passport Foundation",
-    "jade": "Jade"
+    "jade": "Jade",
+    "nunchuk": "Nunchuk",
+    "liana": "Liana",
+    "signal": "Signal"
   },
   "finalCta": {
     "heading": "Solicita una Sesión Estratégica Gratuita",
@@ -193,6 +196,7 @@
   "common": {
     "getStarted": "Comenzar",
     "applyFreeSession": "Solicitar Sesión Estratégica Gratuita",
-    "whatsappMessage": "Hola Schelling Point, quiero ayuda para construir mi Plan Patrimonial de Bitcoin bajo mi propia custodia. Esta es mi situación:"
+    "whatsappMessage": "Hola Schelling Point, quiero ayuda para construir mi Plan Patrimonial de Bitcoin bajo mi propia custodia. Esta es mi situación:",
+    "takeQuiz": "Tomar el Quiz"
   }
 }
