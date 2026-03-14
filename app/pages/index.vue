@@ -139,7 +139,7 @@
           >
             {{ t('hero.description') }}
           </p>
-          <div class="mt-8 flex flex-col gap-8 sm:flex-row sm:items-center">
+          <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
             <UiButton
               as="a"
               href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
@@ -166,6 +166,14 @@
                 />
               </svg>
               {{ t('hero.whatsapp') }}
+            </a>
+            <a
+              href="https://tally.so/r/NpVjPb"
+              target="_blank"
+              rel="noopener"
+              class="flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-white"
+            >
+              {{ t('common.takeQuiz') }}
             </a>
           </div>
         </div>
@@ -403,6 +411,14 @@
               <p class="mt-1 text-lg font-semibold">
                 {{ t('secondChance.closing2') }}
               </p>
+              <a
+                href="https://tally.so/r/NpVjPb"
+                target="_blank"
+                rel="noopener"
+                class="mt-4 inline-flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-white"
+              >
+                {{ t('common.takeQuiz') }}
+              </a>
             </div>
           </div>
         </div>
@@ -472,8 +488,10 @@
             >
               <p class="text-muted-foreground">{{ t('whatWeDo.row3a') }}</p>
               <p class="mt-1 text-lg font-semibold text-white">
-                Designed for <strong>{{ t('whatWeDo.recovery') }}</strong> and
-                <strong>{{ t('whatWeDo.continuity') }}</strong>.
+                <i18n-t keypath="whatWeDo.row3b" tag="span">
+                  <template #recovery><strong>{{ t('whatWeDo.recovery') }}</strong></template>
+                  <template #continuity><strong>{{ t('whatWeDo.continuity') }}</strong></template>
+                </i18n-t>
               </p>
             </div>
             <div
@@ -1078,6 +1096,42 @@
             >
             <span class="text-sm font-medium text-white">
               {{ t('tools.jade') }}
+            </span>
+          </div>
+          <div
+            class="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5"
+          >
+            <img
+              src="/images/tools/nunchuk.svg"
+              alt="Nunchuk"
+              class="size-6 rounded-full object-cover"
+            >
+            <span class="text-sm font-medium text-white">
+              {{ t('tools.nunchuk') }}
+            </span>
+          </div>
+          <div
+            class="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5"
+          >
+            <img
+              src="/images/tools/liana.svg"
+              alt="Liana"
+              class="size-6 rounded-full object-cover"
+            >
+            <span class="text-sm font-medium text-white">
+              {{ t('tools.liana') }}
+            </span>
+          </div>
+          <div
+            class="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5"
+          >
+            <img
+              src="/images/tools/signal.svg"
+              alt="Signal"
+              class="size-6 rounded-full object-cover"
+            >
+            <span class="text-sm font-medium text-white">
+              {{ t('tools.signal') }}
             </span>
           </div>
         </div>
