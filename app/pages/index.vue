@@ -139,16 +139,27 @@
           >
             {{ t('hero.description') }}
           </p>
-          <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
-            <UiButton
-              as="a"
-              href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
-              target="_blank"
-              rel="noopener"
-              class="h-auto rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-white hover:bg-primary/90"
-            >
-              {{ t('nav.getStarted') }}
-            </UiButton>
+          <div class="mt-8 flex flex-col gap-4">
+            <div class="flex flex-row flex-wrap items-center gap-4">
+              <UiButton
+                as="a"
+                href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+                target="_blank"
+                rel="noopener"
+                class="h-auto rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-white hover:bg-primary/90"
+              >
+                {{ t('nav.getStarted') }}
+              </UiButton>
+              <UiButton
+                as="a"
+                href="https://tally.so/r/NpVjPb"
+                target="_blank"
+                rel="noopener"
+                class="h-auto rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-white hover:bg-primary/90"
+              >
+                {{ t('common.takeQuiz') }}
+              </UiButton>
+            </div>
             <a
               :href="whatsappUrl"
               target="_blank"
