@@ -1102,7 +1102,7 @@
             class="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5"
           >
             <img
-              src="/images/tools/nunchuk.svg"
+              src="/images/tools/nunchuk.png"
               alt="Nunchuk"
               class="size-6 rounded-full object-cover"
             >
@@ -1114,7 +1114,7 @@
             class="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5"
           >
             <img
-              src="/images/tools/liana.svg"
+              src="/images/tools/liana.png"
               alt="Liana"
               class="size-6 rounded-full object-cover"
             >
