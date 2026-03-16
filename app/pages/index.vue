@@ -407,14 +407,22 @@
                 {{ t('secondChance.q4') }}
               </p>
             </div>
-            <div class="mt-8">
+           <div class="mt-8">
               <p class="text-sm text-muted-foreground">
-                {{ t('secondChance.closing1') }}
-              </p>
-              <p class="mt-1 text-lg font-semibold">
-                {{ t('secondChance.closing2') }}
-              </p>
-            </div>
+               {{ t('secondChance.closing1') }}
+                </p>
+                <p class="mt-1 text-lg font-semibold">
+              {{ t('secondChance.closing2') }}
+          </p>
+         <a
+    href="https://tally.so/r/NpVjPb"
+    target="_blank"
+    rel="noopener"
+    class="mt-4 inline-flex h-auto rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-white hover:bg-primary/90"
+  >
+    {{ t('common.takeQuiz') }}
+  </a>
+</div>
           </div>
         </div>
       </div>
