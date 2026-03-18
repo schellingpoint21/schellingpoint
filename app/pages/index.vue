@@ -60,7 +60,7 @@
           </NuxtLink>
           <UiButton
             as="a"
-            href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+            href="https://tally.so/r/KY0PX8"
             target="_blank"
             rel="noopener"
             class="rounded-full bg-primary px-5 text-sm text-white hover:bg-primary/90"
