@@ -108,7 +108,7 @@
               </NuxtLink>
               <UiButton
                 as="a"
-                href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+                href="https://tally.so/r/KY0PX8"
                 target="_blank"
                 rel="noopener"
                 class="rounded-full bg-primary px-5 text-sm text-white hover:bg-primary/90"
@@ -143,7 +143,7 @@
             <div class="flex flex-row flex-wrap items-center gap-4">
               <UiButton
                 as="a"
-                href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+                href="https://tally.so/r/KY0PX8"
                 target="_blank"
                 rel="noopener"
                 class="h-auto rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-white hover:bg-primary/90"
@@ -278,7 +278,7 @@
             {{ t('rightWay.title2') }}
           </h2>
           <a
-            href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+            href="https://tally.so/r/KY0PX8"
             target="_blank"
             rel="noopener"
             class="flex items-center gap-2 text-sm text-primary transition-colors hover:text-[#96C971]"
@@ -368,7 +368,7 @@
             {{ t('secondChance.title2') }}
           </h2>
           <a
-            href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+            href="https://tally.so/r/KY0PX8"
             target="_blank"
             rel="noopener"
             class="flex items-center gap-2 text-sm text-primary transition-colors hover:text-[#96C971]"
@@ -440,7 +440,7 @@
             {{ t('whatWeDo.title2') }}
           </h2>
           <a
-            href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+            href="https://tally.so/r/KY0PX8"
             target="_blank"
             rel="noopener"
             class="flex items-center gap-2 text-sm text-primary transition-colors hover:text-[#96C971]"
@@ -517,7 +517,7 @@
             {{ t('framework.heading') }}
           </h2>
           <a
-            href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+            href="https://tally.so/r/KY0PX8"
             target="_blank"
             rel="noopener"
             class="flex items-center gap-2 text-sm text-primary transition-colors hover:text-[#96C971]"
@@ -636,7 +636,7 @@
             {{ t('receive.heading') }}
           </h2>
           <a
-            href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+            href="https://tally.so/r/KY0PX8"
             target="_blank"
             rel="noopener"
             class="flex items-center gap-2 text-sm text-primary transition-colors hover:text-[#96C971]"
@@ -732,7 +732,7 @@
             {{ t('whoWeAre.heading') }}
           </h2>
           <a
-            href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+            href="https://tally.so/r/KY0PX8"
             target="_blank"
             rel="noopener"
             class="flex items-center gap-2 text-sm text-primary transition-colors hover:text-[#96C971]"
@@ -946,7 +946,7 @@
           <div class="mt-6">
             <UiButton
               as="a"
-              href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+              href="https://tally.so/r/KY0PX8"
               target="_blank"
               rel="noopener"
               class="rounded-full border border-border bg-transparent px-6 text-sm font-medium text-white hover:bg-white/5"
@@ -1008,7 +1008,7 @@
           >
             <UiButton
               as="a"
-              href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+              href="https://tally.so/r/KY0PX8"
               target="_blank"
               rel="noopener"
               class="w-full rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-white hover:bg-primary/90"
@@ -1165,7 +1165,7 @@
             >
               <UiButton
                 as="a"
-                href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+                href="https://tally.so/r/KY0PX8"
                 target="_blank"
                 rel="noopener"
                 class="h-auto rounded-full bg-primary px-8 py-3 text-base font-medium text-white hover:bg-primary/90"
