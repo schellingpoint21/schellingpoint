@@ -1,46 +1,41 @@
 import tailwindcss from '@tailwindcss/vite'
 
+const SITE_URL = 'https://schellingpoint.xyz'
+const SITE_TITLE = 'Bitcoin Estate Planning & Self-Custody Advisory'
+const SITE_DESCRIPTION =
+  'Self custody with the right tools, training, and protocols.'
+
 export default defineNuxtConfig({
   app: {
     head: {
       link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
       meta: [
-        {
-          name: 'description',
-          content: 'Self custody with the right tools, training, and protocols.'
-        },
+        { name: 'description', content: SITE_DESCRIPTION },
         { property: 'og:type', content: 'website' },
-        {
-          property: 'og:title',
-          content: 'Schelling Point — Bitcoin Estate Planning'
-        },
-        {
-          property: 'og:description',
-          content: 'Self custody with the right tools, training, and protocols.'
-        },
+        { property: 'og:title', content: SITE_TITLE },
+        { property: 'og:description', content: SITE_DESCRIPTION },
         {
           property: 'og:image',
-          content: 'https://schellingpoint.lat/og-image.png'
+          content: `${SITE_URL}/og-image.png`
         },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
-        { property: 'og:url', content: 'https://schellingpoint.lat' },
+        { property: 'og:url', content: SITE_URL },
         { property: 'og:site_name', content: 'Schelling Point' },
         { name: 'twitter:card', content: 'summary_large_image' },
-        {
-          name: 'twitter:title',
-          content: 'Schelling Point — Bitcoin Estate Planning'
-        },
-        {
-          name: 'twitter:description',
-          content: 'Self custody with the right tools, training, and protocols.'
-        },
+        { name: 'twitter:title', content: SITE_TITLE },
+        { name: 'twitter:description', content: SITE_DESCRIPTION },
         {
           name: 'twitter:image',
-          content: 'https://schellingpoint.lat/og-image.png'
+          content: `${SITE_URL}/og-image.png`
         }
       ],
-      title: 'Schelling Point — Bitcoin Estate Planning'
+      title: SITE_TITLE
+    }
+  },
+  runtimeConfig: {
+    public: {
+      siteUrl: SITE_URL
     }
   },
   compatibilityDate: '2025-07-15',

@@ -73,10 +73,10 @@
             </li>
             <li>
               <a
-                href="mailto:charlie@schellingpoint.lat"
+                href="mailto:charlie@schellingpoint.xyz"
                 class="text-sm text-muted-foreground transition-colors hover:text-white"
               >
-                charlie@schellingpoint.lat
+                charlie@schellingpoint.xyz
               </a>
             </li>
           </ul>
