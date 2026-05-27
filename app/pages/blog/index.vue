@@ -2,6 +2,20 @@
   const { data: posts } = await useAsyncData('blog-posts', () =>
     queryCollection('blog').order('date', 'DESC').all()
   )
+
+  useSeoMeta({
+    title: 'Blog — Schelling Point',
+    description:
+      'Bitcoin estate planning, self-custody, and stewardship — long-form articles for families and business owners holding Bitcoin as multi-generational capital.',
+    ogTitle: 'Schelling Point Blog',
+    ogDescription:
+      'Bitcoin estate planning, self-custody, and stewardship — long-form articles for families and business owners.',
+    ogType: 'website'
+  })
+
+  useHead({
+    link: [{ rel: 'canonical', href: 'https://schellingpoint.xyz/blog' }]
+  })
 </script>
 
 <template>

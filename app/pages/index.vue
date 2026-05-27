@@ -18,8 +18,48 @@
 
   useSeoMeta({
     title: () => t('seo.title'),
-    description: () => t('seo.description')
+    description: () => t('seo.description'),
+    ogTitle: () => t('seo.title'),
+    ogDescription: () => t('seo.description'),
+    ogType: 'website'
   })
+
+  const locale = useI18n().locale
+  const canonicalUrl = computed(() =>
+    locale.value === 'es'
+      ? 'https://schellingpoint.xyz/es'
+      : 'https://schellingpoint.xyz/'
+  )
+
+  useHead({
+    link: [{ rel: 'canonical', href: canonicalUrl.value }]
+  })
+
+  // Pull FAQ entries from i18n locale and emit FAQPage schema for AEO.
+  const faqQuestions = Array.from({ length: 8 }, (_, i) => ({
+    question: t(`faq.q${i + 1}`),
+    answer: t(`faq.a${i + 1}`)
+  }))
+
+  useSchemaOrg([
+    defineWebSite({
+      name: 'Schelling Point',
+      description: () => t('seo.description'),
+      inLanguage: () => locale.value === 'es' ? 'es-ES' : 'en'
+    }),
+    definePerson({
+      name: 'Charlie Stevens',
+      jobTitle: 'Founder',
+      worksFor: { '@type': 'Organization', name: 'Schelling Point' },
+      url: 'https://schellingpoint.xyz/about'
+    }),
+    defineFAQPage({
+      mainEntity: faqQuestions.map(f => ({
+        question: f.question,
+        answer: f.answer
+      }))
+    })
+  ])
 </script>
 
 <template>
