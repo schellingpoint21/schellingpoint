@@ -1,35 +1,19 @@
 import tailwindcss from '@tailwindcss/vite'
 
 const SITE_URL = 'https://schellingpoint.xyz'
+const SITE_TITLE = 'Bitcoin Estate Planning & Self-Custody Advisory'
+const SITE_DESCRIPTION =
+  'Self custody with the right tools, training, and protocols.'
 
 export default defineNuxtConfig({
-  site: {
-    url: SITE_URL,
-    name: 'Schelling Point',
-    description:
-      'Bitcoin estate planning and self-custody advisory for families and business owners holding Bitcoin as multi-generational capital.',
-    defaultLocale: 'en'
-  },
-
   app: {
     head: {
       link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
       meta: [
-        {
-          name: 'description',
-          content:
-            'Bitcoin estate planning and self-custody advisory. Secure, usable, and survivable Bitcoin for your family and long-term legacy.'
-        },
+        { name: 'description', content: SITE_DESCRIPTION },
         { property: 'og:type', content: 'website' },
-        {
-          property: 'og:title',
-          content: 'Schelling Point — Bitcoin Estate Planning'
-        },
-        {
-          property: 'og:description',
-          content:
-            'Bitcoin estate planning and self-custody advisory. Secure, usable, and survivable for your family and long-term legacy.'
-        },
+        { property: 'og:title', content: SITE_TITLE },
+        { property: 'og:description', content: SITE_DESCRIPTION },
         {
           property: 'og:image',
           content: `${SITE_URL}/og-image.png`
@@ -39,24 +23,21 @@ export default defineNuxtConfig({
         { property: 'og:url', content: SITE_URL },
         { property: 'og:site_name', content: 'Schelling Point' },
         { name: 'twitter:card', content: 'summary_large_image' },
-        {
-          name: 'twitter:title',
-          content: 'Schelling Point — Bitcoin Estate Planning'
-        },
-        {
-          name: 'twitter:description',
-          content:
-            'Bitcoin estate planning and self-custody advisory. Secure, usable, and survivable for your family and long-term legacy.'
-        },
+        { name: 'twitter:title', content: SITE_TITLE },
+        { name: 'twitter:description', content: SITE_DESCRIPTION },
         {
           name: 'twitter:image',
           content: `${SITE_URL}/og-image.png`
         }
       ],
-      title: 'Schelling Point — Bitcoin Estate Planning'
+      title: SITE_TITLE
     }
   },
-
+  runtimeConfig: {
+    public: {
+      siteUrl: SITE_URL
+    }
+  },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   modules: [
@@ -66,42 +47,8 @@ export default defineNuxtConfig({
     'shadcn-nuxt',
     '@vueuse/nuxt',
     'nuxt-studio',
-    '@nuxtjs/i18n',
-    '@nuxtjs/sitemap',
-    '@nuxtjs/robots',
-    'nuxt-schema-org'
+    '@nuxtjs/i18n'
   ],
-
-  sitemap: {
-    sources: ['/api/__sitemap__/urls']
-  },
-
-  robots: {
-    sitemap: `${SITE_URL}/sitemap.xml`,
-    groups: [
-      { userAgent: ['*'], allow: ['/'] },
-      // Explicitly allow AI crawlers — AEO is a strategic priority.
-      { userAgent: ['GPTBot'], allow: ['/'] },
-      { userAgent: ['ChatGPT-User'], allow: ['/'] },
-      { userAgent: ['ClaudeBot'], allow: ['/'] },
-      { userAgent: ['anthropic-ai'], allow: ['/'] },
-      { userAgent: ['Google-Extended'], allow: ['/'] },
-      { userAgent: ['PerplexityBot'], allow: ['/'] },
-      { userAgent: ['Applebot-Extended'], allow: ['/'] },
-      { userAgent: ['CCBot'], allow: ['/'] }
-    ]
-  },
-
-  schemaOrg: {
-    identity: {
-      type: 'Organization',
-      name: 'Schelling Point',
-      url: SITE_URL,
-      logo: `${SITE_URL}/sp-logo.png`,
-      sameAs: []
-    }
-  },
-
   css: ['~/assets/css/tailwind.css'],
   vite: {
     plugins: [tailwindcss()]
@@ -134,8 +81,7 @@ export default defineNuxtConfig({
       { code: 'es', file: 'es.json', name: 'Español' }
     ],
     langDir: 'locales',
-    strategy: 'prefix_except_default',
-    baseUrl: SITE_URL
+    strategy: 'prefix_except_default'
   },
   router: {
     options: {
