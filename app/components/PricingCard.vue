@@ -50,7 +50,7 @@
     </p>
     <UiButton
       as="a"
-      href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+      href="https://tally.so/r/KY0PX8"
       target="_blank"
       rel="noopener"
       class="mt-6 w-full rounded-full text-sm font-medium"
