@@ -6,6 +6,13 @@
 
 <template>
   <div class="container mx-auto px-4 py-12 max-w-4xl">
+    <NuxtLink
+      to="/"
+      class="text-muted-foreground hover:text-primary transition-colors mb-8 inline-block"
+    >
+      &larr; Back home
+    </NuxtLink>
+
     <h1 class="font-bold text-4xl mb-8">Blog</h1>
 
     <div v-if="posts?.length" class="flex flex-col gap-8">
