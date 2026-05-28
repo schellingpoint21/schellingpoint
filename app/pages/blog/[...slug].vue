@@ -16,10 +16,37 @@
     throw createError({ statusCode: 404, statusMessage: 'Post not found' })
   }
 
+  const canonicalUrl = computed(
+    () => `https://schellingpoint.xyz/blog/${slug.value}`
+  )
+
   useSeoMeta({
     title: post.value.title,
-    description: post.value.description
+    description: post.value.description,
+    ogTitle: post.value.title,
+    ogDescription: post.value.description,
+    ogType: 'article',
+    articlePublishedTime: post.value.date,
+    articleAuthor: ['Charlie Stevens']
   })
+
+  useHead({
+    link: [{ rel: 'canonical', href: canonicalUrl.value }]
+  })
+
+  // Article schema for AEO
+  useSchemaOrg([
+    defineArticle({
+      headline: post.value.title,
+      description: post.value.description,
+      datePublished: post.value.date,
+      author: {
+        '@type': 'Person',
+        name: 'Charlie Stevens',
+        url: 'https://schellingpoint.xyz/about'
+      }
+    })
+  ])
 </script>
 
 <template>
