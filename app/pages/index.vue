@@ -53,6 +53,12 @@
             {{ t('nav.faq') }}
           </NuxtLink>
           <NuxtLink
+            to="/resources/bitcoin-estate-planning"
+            class="text-sm text-white/70 transition-colors hover:text-white"
+          >
+            {{ t('nav.resources') }}
+          </NuxtLink>
+          <NuxtLink
             to="/blog"
             class="text-sm text-white/70 transition-colors hover:text-white"
           >
@@ -99,6 +105,13 @@
               >
                 {{ t('nav.faq') }}
               </button>
+              <NuxtLink
+                to="/resources/bitcoin-estate-planning"
+                class="text-lg text-white/70 transition-colors hover:text-white"
+                @click="mobileMenuOpen = false"
+              >
+                {{ t('nav.resources') }}
+              </NuxtLink>
               <NuxtLink
                 to="/blog"
                 class="text-lg text-white/70 transition-colors hover:text-white"
