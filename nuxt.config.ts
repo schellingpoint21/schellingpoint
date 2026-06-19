@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite'
 const SITE_URL = 'https://schellingpoint.xyz'
 const SITE_TITLE = 'Bitcoin Estate Planning & Self-Custody Advisory'
 const SITE_DESCRIPTION =
-  'Self custody with the right tools, training, and protocols.'
+  'Self custody your Bitcoin for your family or organisation with the right tools, training, and protocols so your capital stays secure, usable, and survivable for the right purpose at the right time.'
 
 export default defineNuxtConfig({
   app: {
@@ -33,6 +33,10 @@ export default defineNuxtConfig({
       title: SITE_TITLE
     }
   },
+  site: {
+    url: SITE_URL,
+    name: 'Schelling Point'
+  },
   runtimeConfig: {
     public: {
       siteUrl: SITE_URL
@@ -47,7 +51,9 @@ export default defineNuxtConfig({
     'shadcn-nuxt',
     '@vueuse/nuxt',
     'nuxt-studio',
-    '@nuxtjs/i18n'
+    '@nuxtjs/i18n',
+    '@nuxtjs/sitemap',
+    'nuxt-schema-org'
   ],
   css: ['~/assets/css/tailwind.css'],
   vite: {
@@ -77,11 +83,33 @@ export default defineNuxtConfig({
   i18n: {
     defaultLocale: 'en',
     locales: [
-      { code: 'en', file: 'en.json', name: 'English' },
-      { code: 'es', file: 'es.json', name: 'Español' }
+      { code: 'en', file: 'en.json', name: 'English', language: 'en-US' },
+      { code: 'es', file: 'es.json', name: 'Español', language: 'es-ES' }
     ],
     langDir: 'locales',
     strategy: 'prefix_except_default'
+  },
+  sitemap: {
+    // Routes auto-discovered from app/pages and @nuxt/content.
+    // hreflang alternates emitted automatically via @nuxtjs/i18n integration.
+    autoLastmod: true,
+    xsl: false
+  },
+  schemaOrg: {
+    // Emitted server-side so AI crawlers (GPTBot, ClaudeBot, PerplexityBot)
+    // and non-JS bots can read structured data in raw HTML.
+    identity: {
+      type: 'Organization',
+      name: 'Schelling Point',
+      url: SITE_URL,
+      logo: `${SITE_URL}/sp-logo.png`,
+      description: SITE_DESCRIPTION,
+      sameAs: [
+        'https://instagram.com/schellingpoint21',
+        'https://x.com/schellingp21',
+        'https://www.linkedin.com/company/schelling-point/'
+      ]
+    }
   },
   router: {
     options: {

@@ -20,6 +20,25 @@
     title: () => t('seo.title'),
     description: () => t('seo.description')
   })
+
+  // FAQ entries — kept in sync with FaqAccordion.vue and the locale files.
+  // Emitted server-side as a FAQPage so Google is eligible for FAQ rich results
+  // and AI answer engines can read the Q&A directly from raw HTML.
+  const faqSchemas = [1, 2, 3, 4, 5, 6, 7, 8].map((i) =>
+    defineQuestion({
+      name: () => t(`faq.q${i}`),
+      acceptedAnswer: () => t(`faq.a${i}`)
+    })
+  )
+
+  useSchemaOrg([
+    defineWebPage({
+      '@type': 'FAQPage',
+      name: () => t('seo.title'),
+      description: () => t('seo.description')
+    }),
+    ...faqSchemas
+  ])
 </script>
 
 <template>

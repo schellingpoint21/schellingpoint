@@ -2,6 +2,16 @@
   const { data: posts } = await useAsyncData('blog-posts', () =>
     queryCollection('blog').order('date', 'DESC').all()
   )
+
+  // Unique per-page metadata so /blog no longer inherits the homepage title.
+  useSeoMeta({
+    title: 'Blog — Bitcoin Estate Planning & Self-Custody',
+    description:
+      'Guides and articles on Bitcoin estate planning, self-custody, inheritance, and multi-generational wealth from Schelling Point.',
+    ogTitle: 'Blog — Bitcoin Estate Planning & Self-Custody',
+    ogDescription:
+      'Guides and articles on Bitcoin estate planning, self-custody, inheritance, and multi-generational wealth from Schelling Point.'
+  })
 </script>
 
 <template>
