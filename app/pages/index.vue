@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { Blocks, Menu, RotateCcw, ShieldAlert } from 'lucide-vue-next'
 
-  const { t } = useI18n()
+  const { t, locale } = useI18n()
   const mobileMenuOpen = ref(false)
 
   const scrollToSection = (hash: string) => {
@@ -19,6 +19,11 @@
   useSeoMeta({
     title: () => t('seo.title'),
     description: () => t('seo.description')
+  })
+
+  // Loads the Fillout embed script so the playbook popup opens on click.
+  useHead({
+    script: [{ src: 'https://server.fillout.com/embed/v1/', defer: true }]
   })
 
   // FAQ entries — kept in sync with FaqAccordion.vue and the locale files.
@@ -72,6 +77,12 @@
             {{ t('nav.faq') }}
           </NuxtLink>
           <NuxtLink
+            to="#playbook"
+            class="text-sm text-white/70 transition-colors hover:text-white"
+          >
+            {{ t('playbook.navLabel') }}
+          </NuxtLink>
+          <NuxtLink
             to="/resources/bitcoin-estate-planning"
             class="text-sm text-white/70 transition-colors hover:text-white"
           >
@@ -123,6 +134,12 @@
                 @click="scrollToSection('#faq')"
               >
                 {{ t('nav.faq') }}
+              </button>
+              <button
+                class="text-left text-lg text-white/70 transition-colors hover:text-white"
+                @click="scrollToSection('#playbook')"
+              >
+                {{ t('playbook.navLabel') }}
               </button>
               <NuxtLink
                 to="/resources/bitcoin-estate-planning"
@@ -1171,6 +1188,43 @@
           </div>
         </div>
         <p class="mt-8 text-sm text-muted-foreground">{{ t('tools.note') }}</p>
+      </div>
+    </section>
+
+    <SectionSeparator />
+
+    <!-- SECTION 9.5: Playbook download -->
+    <section id="playbook" class="px-6 pb-20">
+      <div class="mx-auto max-w-7xl">
+        <div
+          class="relative overflow-hidden rounded-3xl border border-primary/20 bg-linear-to-b from-primary/5 to-transparent p-12 text-center md:p-20"
+        >
+          <div
+            class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(123,168,92,0.15)_0%,transparent_60%)]"
+          />
+          <div class="relative">
+            <h2 class="text-4xl font-bold md:text-5xl">
+              {{ t('playbook.heading') }}
+            </h2>
+            <p class="mx-auto mt-4 max-w-xl text-muted-foreground">
+              {{ t('playbook.body') }}
+            </p>
+            <div class="mt-8 flex justify-center">
+              <button
+                type="button"
+                data-fillout-id="wjPHP61hErus"
+                data-fillout-embed-type="popup"
+                data-fillout-dynamic-resize
+                data-fillout-inherit-parameters
+                data-fillout-popup-size="medium"
+                :data-fillout-parameters="`lang=${locale}`"
+                class="h-auto rounded-full bg-primary px-8 py-3 text-base font-medium text-white hover:bg-primary/90"
+              >
+                {{ t('playbook.cta') }}
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
