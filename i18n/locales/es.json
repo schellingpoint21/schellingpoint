@@ -90,6 +90,7 @@
   },
   "playbook": {
     "navLabel": "Manual Gratuito",
+    "badge": "Descarga Gratuita",
     "heading": "Obtén el Manual del Patrimonio en Bitcoin",
     "body": "Un manual fundamentado para custodiar, asegurar y transmitir Bitcoin dentro del patrimonio familiar. Déjanos tus datos y te lo enviamos por correo de inmediato.",
     "cta": "Obtener el Manual"

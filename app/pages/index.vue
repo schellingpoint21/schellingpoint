@@ -245,6 +245,62 @@
       </div>
     </section>
 
+    <!-- Playbook feature band (directly under hero) -->
+    <section id="playbook" class="px-6 pt-4 pb-16">
+      <div class="mx-auto max-w-7xl">
+        <div
+          class="relative overflow-hidden rounded-3xl border border-primary/20 bg-linear-to-br from-primary/10 to-transparent p-8 md:p-12"
+        >
+          <div
+            class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(123,168,92,0.18)_0%,transparent_55%)]"
+          />
+          <div
+            class="relative grid items-center gap-8 md:grid-cols-[auto_1fr]"
+          >
+            <div class="flex justify-center md:justify-start">
+              <NuxtImg
+                src="/images/playbook-cover.png"
+                alt="The Bitcoin Estate Playbook cover"
+                class="w-44 rounded-lg shadow-2xl ring-1 ring-white/10 md:w-52"
+                width="208"
+                height="294"
+                loading="lazy"
+              />
+            </div>
+            <div class="text-center md:text-left">
+              <p
+                class="text-sm font-medium uppercase tracking-wider text-primary"
+              >
+                {{ t('playbook.badge') }}
+              </p>
+              <h2 class="mt-2 text-3xl font-bold md:text-4xl">
+                {{ t('playbook.heading') }}
+              </h2>
+              <p
+                class="mx-auto mt-3 max-w-lg text-muted-foreground md:mx-0"
+              >
+                {{ t('playbook.body') }}
+              </p>
+              <div class="mt-6 flex justify-center md:justify-start">
+                <button
+                  type="button"
+                  data-fillout-id="wjPHP61hErus"
+                  data-fillout-embed-type="popup"
+                  data-fillout-dynamic-resize
+                  data-fillout-inherit-parameters
+                  data-fillout-popup-size="medium"
+                  :data-fillout-parameters="`lang=${locale}`"
+                  class="h-auto rounded-full bg-primary px-8 py-3 text-base font-medium text-white hover:bg-primary/90"
+                >
+                  {{ t('playbook.cta') }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Social Links & Divider -->
     <div class="px-6">
       <div class="mx-auto max-w-7xl">
@@ -1188,43 +1244,6 @@
           </div>
         </div>
         <p class="mt-8 text-sm text-muted-foreground">{{ t('tools.note') }}</p>
-      </div>
-    </section>
-
-    <SectionSeparator />
-
-    <!-- SECTION 9.5: Playbook download -->
-    <section id="playbook" class="px-6 pb-20">
-      <div class="mx-auto max-w-7xl">
-        <div
-          class="relative overflow-hidden rounded-3xl border border-primary/20 bg-linear-to-b from-primary/5 to-transparent p-12 text-center md:p-20"
-        >
-          <div
-            class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(123,168,92,0.15)_0%,transparent_60%)]"
-          />
-          <div class="relative">
-            <h2 class="text-4xl font-bold md:text-5xl">
-              {{ t('playbook.heading') }}
-            </h2>
-            <p class="mx-auto mt-4 max-w-xl text-muted-foreground">
-              {{ t('playbook.body') }}
-            </p>
-            <div class="mt-8 flex justify-center">
-              <button
-                type="button"
-                data-fillout-id="wjPHP61hErus"
-                data-fillout-embed-type="popup"
-                data-fillout-dynamic-resize
-                data-fillout-inherit-parameters
-                data-fillout-popup-size="medium"
-                :data-fillout-parameters="`lang=${locale}`"
-                class="h-auto rounded-full bg-primary px-8 py-3 text-base font-medium text-white hover:bg-primary/90"
-              >
-                {{ t('playbook.cta') }}
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
