@@ -16,6 +16,111 @@
     return `https://wa.me/50370204642?text=${message}`
   })
 
+  // Pricing tiers — copy and prices live in the locale files (packages.*).
+  const tiers = computed(() => [
+    {
+      key: 'foundation',
+      title: t('packages.foundationTitle'),
+      who: t('packages.foundationWho'),
+      price: t('packages.foundationPrice'),
+      sats: t('packages.foundationSats'),
+      cta: t('packages.foundationCta'),
+      features: [
+        t('packages.foundationFeature1'),
+        t('packages.foundationFeature2'),
+        t('packages.foundationFeature3'),
+        t('packages.foundationFeature4'),
+        t('packages.foundationFeature5')
+      ]
+    },
+    {
+      key: 'family',
+      title: t('packages.familyTitle'),
+      who: t('packages.familyWho'),
+      badge: t('packages.familyBadge'),
+      highlighted: true,
+      price: t('packages.familyPrice'),
+      sats: t('packages.familySats'),
+      cta: t('packages.familyCta'),
+      features: [
+        t('packages.familyFeature1'),
+        t('packages.familyFeature2'),
+        t('packages.familyFeature3'),
+        t('packages.familyFeature4'),
+        t('packages.familyFeature5'),
+        t('packages.familyFeature6')
+      ]
+    },
+    {
+      key: 'legacy',
+      title: t('packages.legacyTitle'),
+      who: t('packages.legacyWho'),
+      price: t('packages.legacyPrice'),
+      sats: t('packages.legacySats'),
+      cta: t('packages.legacyCta'),
+      features: [
+        t('packages.legacyFeature1'),
+        t('packages.legacyFeature2'),
+        t('packages.legacyFeature3'),
+        t('packages.legacyFeature4'),
+        t('packages.legacyFeature5'),
+        t('packages.legacyFeature6')
+      ]
+    }
+  ])
+
+  // Individual services shown beneath the tiers.
+  const serviceRows = computed(() => [
+    {
+      name: t('packages.svcAssessName'),
+      desc: t('packages.svcAssessDesc'),
+      usd: t('packages.svcAssessUsd'),
+      sats: ''
+    },
+    {
+      name: t('packages.svcSetupName'),
+      desc: t('packages.svcSetupDesc'),
+      usd: t('packages.svcSetupUsd'),
+      sats: t('packages.svcSetupSats')
+    },
+    {
+      name: t('packages.svcReviewName'),
+      desc: t('packages.svcReviewDesc'),
+      usd: t('packages.svcReviewUsd'),
+      sats: t('packages.svcReviewSats')
+    },
+    {
+      name: t('packages.svcInheritName'),
+      desc: t('packages.svcInheritDesc'),
+      usd: t('packages.svcInheritUsd'),
+      sats: t('packages.svcInheritSats')
+    },
+    {
+      name: t('packages.svcAdvisoryName'),
+      desc: t('packages.svcAdvisoryDesc'),
+      usd: t('packages.svcAdvisoryUsd'),
+      sats: t('packages.svcAdvisorySats')
+    },
+    {
+      name: t('packages.svcEssentialName'),
+      desc: t('packages.svcEssentialDesc'),
+      usd: t('packages.svcEssentialUsd'),
+      sats: t('packages.svcEssentialSats')
+    },
+    {
+      name: t('packages.svcAdvancedName'),
+      desc: t('packages.svcAdvancedDesc'),
+      usd: t('packages.svcAdvancedUsd'),
+      sats: t('packages.svcAdvancedSats')
+    },
+    {
+      name: t('packages.svcPremiumName'),
+      desc: t('packages.svcPremiumDesc'),
+      usd: t('packages.svcPremiumUsd'),
+      sats: t('packages.svcPremiumSats')
+    }
+  ])
+
   useSeoMeta({
     title: () => t('seo.title'),
     description: () => t('seo.description')
@@ -956,171 +1061,132 @@
     <!-- SECTION 7: Packages & Pricing -->
     <section id="packages" class="px-6 pb-20">
       <div class="mx-auto max-w-7xl">
-        <div class="mb-4">
-          <h2 class="text-4xl font-bold leading-tight">
+        <div class="mb-2 text-center">
+          <p
+            class="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-primary"
+          >
+            {{ t('packages.eyebrow') }}
+          </p>
+          <h2 class="mx-auto max-w-3xl text-4xl font-bold leading-tight">
             {{ t('packages.heading') }}
           </h2>
-          <p class="mt-3 text-muted-foreground">
+          <p class="mx-auto mt-4 max-w-2xl text-muted-foreground">
             {{ t('packages.subheading') }}
           </p>
+          <div
+            class="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-xs text-muted-foreground"
+          >
+            <span class="size-1.5 rounded-full bg-primary" />
+            {{ t('packages.rateNote') }}
+          </div>
         </div>
 
-        <!-- Main packages -->
-        <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
-          <PricingCard
-            :title="t('packages.pdfTitle')"
-            :price="t('packages.pdfPrice')"
-            :price-usd="t('packages.pdfPriceUsd')"
-            :features="[
-              t('packages.pdfFeature1'),
-              t('packages.pdfFeature2'),
-              t('packages.pdfFeature3'),
-              t('packages.pdfFeature4')
-            ]"
-            :cta="t('packages.pdfCta')"
-          />
-          <PricingCard
-            :title="t('packages.implTitle')"
-            :price="t('packages.implPrice')"
-            :price-usd="t('packages.implPriceUsd')"
-            :features="[
-                t('packages.implFeature1'),
-                t('packages.implFeature2'),
-                t('packages.implFeature3')
-              ]"
-            :cta="t('packages.implCta')"
-            :note="t('packages.implNote')"
-            :highlighted="true"
-          />
+        <!-- Three family tiers -->
+        <div class="mt-12 grid grid-cols-1 items-stretch gap-6 md:grid-cols-3">
+          <div
+            v-for="tier in tiers"
+            :key="tier.key"
+            class="relative flex flex-col rounded-2xl border bg-card p-7"
+            :class="
+              tier.highlighted
+                ? 'border-primary/50 shadow-[0_0_0_1px_rgba(123,168,92,0.18)]'
+                : 'border-border'
+            "
+          >
+            <span
+              v-if="tier.badge"
+              class="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-primary px-3.5 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#0e1408]"
+            >
+              {{ tier.badge }}
+            </span>
+
+            <h3 class="text-xl font-semibold text-white">{{ tier.title }}</h3>
+            <p class="mt-1 min-h-[3.25rem] text-sm text-muted-foreground">
+              {{ tier.who }}
+            </p>
+
+            <div class="mt-1 flex items-baseline gap-2">
+              <span class="text-4xl font-bold text-white">{{ tier.price }}</span>
+              <span class="text-sm text-muted-foreground">{{
+                t('packages.oneTime')
+              }}</span>
+            </div>
+            <p class="mt-1 text-xs font-medium text-primary">{{ tier.sats }}</p>
+
+            <div class="my-5 h-px bg-border" />
+
+            <ul class="flex-1 space-y-0">
+              <li
+                v-for="(feat, i) in tier.features"
+                :key="i"
+                class="flex items-start gap-2.5 border-b border-border/50 py-2 text-sm text-muted-foreground last:border-b-0"
+              >
+                <svg
+                  class="mt-0.5 size-4 shrink-0 text-primary"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span>{{ feat }}</span>
+              </li>
+            </ul>
+
+            <UiButton
+              as="a"
+              href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+              target="_blank"
+              rel="noopener"
+              class="mt-6 h-auto w-full rounded-full px-6 py-2.5 text-sm font-medium"
+              :class="
+                tier.highlighted
+                  ? 'bg-primary text-white hover:bg-primary/90'
+                  : 'border border-border bg-transparent text-white hover:bg-white/5'
+              "
+            >
+              {{ tier.cta }}
+            </UiButton>
+          </div>
         </div>
 
-        <!-- Yearly add-ons -->
+        <!-- Individual services -->
         <div
-          class="mt-10 rounded-2xl border border-dashed border-border bg-card/50 p-6"
+          class="mt-10 rounded-2xl border border-dashed border-border bg-card/50 p-6 md:p-8"
         >
           <h3 class="text-lg font-semibold text-white">
-            {{ t('packages.yearlyHeading') }}
+            {{ t('packages.servicesHeading') }}
           </h3>
-          <div class="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
-            <!-- Option A -->
-            <div class="rounded-xl border border-border bg-card p-5">
-              <h4 class="font-semibold text-white">
-                {{ t('packages.optionATitle') }}
-              </h4>
-              <p class="mt-2 text-lg font-bold text-primary">
-                {{ t('packages.optionAPrice') }}
-              </p>
-              <p class="text-xs text-muted-foreground">
-                {{ t('packages.optionAPriceUsd') }}
-              </p>
-              <p class="mt-3 text-sm text-muted-foreground">
-                {{ t('packages.optionADesc') }}
-              </p>
-            </div>
-            <!-- Option B -->
-            <div class="rounded-xl border border-border bg-card p-5">
-              <h4 class="font-semibold text-white">
-                {{ t('packages.optionBTitle') }}
-              </h4>
-              <p class="mt-2 text-lg font-bold text-primary">
-                {{ t('packages.optionBPrice') }}
-              </p>
-              <p class="text-xs text-muted-foreground">
-                {{ t('packages.optionBPriceUsd') }}
-              </p>
-              <p class="mt-3 text-sm text-muted-foreground">
-                {{ t('packages.optionBDesc') }}
-              </p>
-            </div>
-            <!-- Option C (Bundle) -->
-            <div class="rounded-xl border border-primary/30 bg-card p-5">
-              <h4 class="font-semibold text-white">
-                {{ t('packages.optionCTitle') }}
-              </h4>
-              <p class="mt-2 text-lg font-bold text-primary">
-                {{ t('packages.optionCPrice') }}
-              </p>
-              <p class="text-xs text-muted-foreground">
-                {{ t('packages.optionCPriceUsd') }}
-              </p>
-              <p class="mt-3 text-sm text-muted-foreground">
-                {{ t('packages.optionCDesc') }}
-              </p>
-            </div>
-          </div>
-          <div class="mt-6">
-            <UiButton
-              as="a"
-              href="https://tally.so/r/KY0PX8"
-              target="_blank"
-              rel="noopener"
-              class="rounded-full border border-border bg-transparent px-6 text-sm font-medium text-white hover:bg-white/5"
+          <p class="mt-1 text-sm text-muted-foreground">
+            {{ t('packages.servicesSub') }}
+          </p>
+          <div class="mt-6 grid grid-cols-1 gap-x-12 gap-y-0 md:grid-cols-2">
+            <div
+              v-for="svc in serviceRows"
+              :key="svc.name"
+              class="flex items-baseline justify-between gap-4 border-b border-border py-3.5"
             >
-              {{ t('packages.yearlyCta') }}
-            </UiButton>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <SectionSeparator />
-
-    <!-- SECTION 8: Consulting -->
-    <section class="px-6 pb-20">
-      <div class="mx-auto max-w-7xl">
-        <div
-          class="overflow-hidden rounded-2xl border border-border bg-card md:flex"
-        >
-          <!-- Left: Info -->
-          <div class="flex-1 p-8 md:p-10">
-            <h2 class="text-3xl font-bold">{{ t('consulting.heading') }}</h2>
-            <div class="mt-8 space-y-4">
-              <div class="rounded-xl border border-border bg-background/50 p-4">
-                <div class="flex items-baseline justify-between">
-                  <h4 class="font-semibold text-white">
-                    {{ t('consulting.singleTitle') }}
-                  </h4>
-                  <span class="text-xs text-muted-foreground"
-                    >{{ t('consulting.singleDesc') }}</span
-                  >
-                </div>
-                <p class="mt-1 text-lg font-bold text-primary">
-                  {{ t('consulting.singlePrice') }}
-                </p>
-                <p class="text-xs text-muted-foreground">
-                  {{ t('consulting.singlePriceUsd') }}
+              <div>
+                <p class="text-sm text-white">{{ svc.name }}</p>
+                <p class="mt-0.5 text-xs text-muted-foreground">
+                  {{ svc.desc }}
                 </p>
               </div>
-              <div class="rounded-xl border border-border bg-background/50 p-4">
-                <h4 class="font-semibold text-white">
-                  {{ t('consulting.packTitle') }}
-                </h4>
-                <p class="mt-1 text-lg font-bold text-primary">
-                  {{ t('consulting.packPrice') }}
-                </p>
-                <p class="text-xs text-muted-foreground">
-                  {{ t('consulting.packPriceUsd') }}
+              <div class="text-right whitespace-nowrap">
+                <p class="text-sm font-semibold text-white">{{ svc.usd }}</p>
+                <p v-if="svc.sats" class="text-[11px] text-primary">
+                  {{ svc.sats }}
                 </p>
               </div>
             </div>
-            <p class="mt-4 text-xs text-muted-foreground italic">
-              {{ t('consulting.discount') }}
-            </p>
           </div>
-          <!-- Right: CTA -->
-          <div
-            class="flex flex-col items-center justify-center bg-primary/5 p-8 md:w-72 md:p-10"
-          >
-            <UiButton
-              as="a"
-              href="https://tally.so/r/KY0PX8"
-              target="_blank"
-              rel="noopener"
-              class="w-full rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-white hover:bg-primary/90"
-            >
-              {{ t('consulting.cta') }}
-            </UiButton>
-          </div>
+          <p class="mt-6 text-xs leading-relaxed text-muted-foreground">
+            {{ t('packages.servicesNote') }}
+          </p>
         </div>
       </div>
     </section>
