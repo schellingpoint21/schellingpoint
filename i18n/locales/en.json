@@ -200,7 +200,7 @@
   "finalCta": {
     "heading": "Apply for a Free Strategy Session",
     "body": "In a short call, we'll understand your situation and map the right next steps for your Self Custody Bitcoin Financial Framework.",
-    "cta": "Apply for a Free Strategy Session",
+    "cta": "See if you qualify for a strategy session",
     "whatsapp": "Message Us on WhatsApp"
   },
   "faq": {
@@ -232,6 +232,7 @@
   "common": {
     "getStarted": "Get started",
     "applyFreeSession": "Apply for a Free Strategy Session",
+    "bookCta": "See if you qualify for a strategy session",
     "whatsappMessage": "Hi Schelling Point, I want help building my Bitcoin Estate Plan under my own custody. Here's my situation:",
     "takeQuiz": "Self-Custody Quiz"
   }

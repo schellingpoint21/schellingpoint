@@ -302,16 +302,7 @@
                 rel="noopener"
                 class="h-auto rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-white hover:bg-primary/90"
               >
-                {{ t('nav.getStarted') }}
-              </UiButton>
-              <UiButton
-                as="a"
-                href="https://tally.so/r/NpVjPb"
-                target="_blank"
-                rel="noopener"
-                class="h-auto rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-white hover:bg-primary/90"
-              >
-                {{ t('common.takeQuiz') }}
+                {{ t('common.bookCta') }}
               </UiButton>
             </div>
             <a
@@ -1139,7 +1130,7 @@
 
             <UiButton
               as="a"
-              href="https://calendly.com/charlie-schellingpoint-jwgf/30min"
+              href="https://tally.so/r/KY0PX8"
               target="_blank"
               rel="noopener"
               class="mt-6 h-auto w-full rounded-full px-6 py-2.5 text-sm font-medium"

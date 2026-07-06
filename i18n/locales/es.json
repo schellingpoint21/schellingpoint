@@ -200,7 +200,7 @@
   "finalCta": {
     "heading": "Solicita una Sesión Estratégica Gratuita",
     "body": "En una breve llamada, entenderemos tu situación y trazaremos los próximos pasos para tu Marco Financiero de Bitcoin en Autocustodia.",
-    "cta": "Solicitar Sesión Estratégica Gratuita",
+    "cta": "Comprueba si calificas para una sesión estratégica",
     "whatsapp": "Escríbenos por WhatsApp"
   },
   "faq": {
@@ -232,6 +232,7 @@
   "common": {
     "getStarted": "Comenzar",
     "applyFreeSession": "Solicitar Sesión Estratégica Gratuita",
+    "bookCta": "Comprueba si calificas para una sesión estratégica",
     "whatsappMessage": "Hola Schelling Point, quiero ayuda para construir mi Plan Patrimonial de Bitcoin bajo mi propia custodia. Esta es mi situación:",
     "takeQuiz": "Quiz de Autocustodia"
   }
