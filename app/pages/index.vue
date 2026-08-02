@@ -1219,18 +1219,6 @@
             class="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5"
           >
             <img
-              src="/images/tools/coldcard.png"
-              alt="Coldcard"
-              class="size-6 rounded-full object-cover"
-            >
-            <span class="text-sm font-medium text-white">
-              {{ t('tools.coldcard') }}
-            </span>
-          </div>
-          <div
-            class="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5"
-          >
-            <img
               src="/images/tools/krux.png"
               alt="Krux"
               class="size-6 rounded-full object-cover"
