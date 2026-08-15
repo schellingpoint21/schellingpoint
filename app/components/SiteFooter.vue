@@ -1,5 +1,6 @@
 <script setup lang="ts">
   const { t } = useI18n()
+  const localePath = useLocalePath()
 </script>
 
 <template>
@@ -36,6 +37,14 @@
                 class="text-sm text-muted-foreground transition-colors hover:text-white"
               >
                 {{ t('nav.packages') }}
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink
+                :to="localePath('/multisig')"
+                class="text-sm text-muted-foreground transition-colors hover:text-white"
+              >
+                {{ t('nav.multisig') }}
               </NuxtLink>
             </li>
             <li>

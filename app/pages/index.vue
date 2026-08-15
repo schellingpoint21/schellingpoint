@@ -2,6 +2,7 @@
   import { Blocks, Menu, RotateCcw, ShieldAlert } from 'lucide-vue-next'
 
   const { t, locale } = useI18n()
+  const localePath = useLocalePath()
   const mobileMenuOpen = ref(false)
 
   const scrollToSection = (hash: string) => {
@@ -64,7 +65,8 @@
         t('packages.legacyFeature3'),
         t('packages.legacyFeature4'),
         t('packages.legacyFeature5'),
-        t('packages.legacyFeature6')
+        t('packages.legacyFeature6'),
+        t('packages.legacyFeature7')
       ]
     }
   ])
@@ -1144,6 +1146,17 @@
             </UiButton>
           </div>
         </div>
+
+        <!-- Specialty: multi-vendor multisig -->
+        <p class="mt-8 text-center text-sm text-muted-foreground">
+          {{ t('packages.multisigNote') }}
+          <NuxtLink
+            :to="localePath('/multisig')"
+            class="font-medium text-primary transition-colors hover:text-primary/80"
+          >
+            {{ t('packages.multisigLink') }} &rarr;
+          </NuxtLink>
+        </p>
 
         <!-- Individual services -->
         <div
