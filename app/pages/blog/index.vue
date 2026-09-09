@@ -1,6 +1,9 @@
 <script setup lang="ts">
   const { data: posts } = await useAsyncData('blog-posts', () =>
-    queryCollection('blog').order('date', 'DESC').all()
+    queryCollection('blog')
+      .select('title', 'description', 'date', 'path', 'author', 'readingTime')
+      .order('date', 'DESC')
+      .all()
   )
 
   // Unique per-page metadata so /blog no longer inherits the homepage title.
@@ -23,7 +26,11 @@
       &larr; Back home
     </NuxtLink>
 
-    <h1 class="font-bold text-4xl mb-8">Blog</h1>
+    <h1 class="font-bold text-4xl mb-3">Blog</h1>
+    <p class="text-muted-foreground mb-10 max-w-2xl">
+      Essays on holding Bitcoin as long-term, multi-generational capital:
+      custody, inheritance, and continuity.
+    </p>
 
     <div v-if="posts?.length" class="flex flex-col gap-8">
       <article
@@ -40,17 +47,23 @@
           <p v-if="post.description" class="text-muted-foreground mt-2">
             {{ post.description }}
           </p>
-          <time
-            v-if="post.date"
-            :datetime="post.date"
-            class="text-sm text-muted-foreground mt-4 block"
-          >
-            {{ new Date(post.date).toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric'
-            }) }}
-          </time>
+          <p class="text-sm text-muted-foreground mt-4">
+            <span v-if="post.author">By {{ post.author }}</span>
+            <span v-if="post.author && post.date" aria-hidden="true">
+              &middot;
+            </span>
+            <time v-if="post.date" :datetime="post.date">
+              {{ new Date(post.date).toLocaleDateString('en-GB', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+              }) }}
+            </time>
+            <template v-if="post.readingTime">
+              <span aria-hidden="true"> &middot; </span>
+              <span>{{ post.readingTime }}</span>
+            </template>
+          </p>
         </NuxtLink>
       </article>
     </div>

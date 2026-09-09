@@ -90,7 +90,7 @@ export default defineNuxtConfig({
     strategy: 'prefix_except_default'
   },
   sitemap: {
-    // Routes auto-discovered from app/pages and @nuxt/content.
+    // Page routes auto-discovered; blog posts registered via asSitemapCollection in content.config.ts.
     // hreflang alternates emitted automatically via @nuxtjs/i18n integration.
     autoLastmod: true,
     xsl: false
