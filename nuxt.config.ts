@@ -115,5 +115,36 @@ export default defineNuxtConfig({
     options: {
       scrollBehaviorType: 'smooth'
     }
+  },
+  // Blog pages are pre-rendered at build time. On Vercel the server-side
+  // content database (better-sqlite3) is unavailable at runtime, so any
+  // server-rendered blog request returned "No posts yet" / 404 while
+  // client-side navigation (WASM dump) worked. Static HTML sidesteps that.
+  routeRules: {
+    '/blog': { prerender: true },
+    '/blog/**': { prerender: true },
+    '/es/blog': { prerender: true },
+    '/es/blog/**': { prerender: true }
+  },
+  nitro: {
+    prerender: {
+      // Crawl from /blog to discover posts, but only pre-render blog routes
+      // and the sitemap; everything else stays server-rendered as before.
+      crawlLinks: true,
+      routes: ['/blog', '/es/blog', '/sitemap_index.xml'],
+      ignore: [
+        (path: string) =>
+          !(
+            path === '/blog' ||
+            path.startsWith('/blog/') ||
+            path === '/es/blog' ||
+            path.startsWith('/es/blog/') ||
+            path === '/sitemap_index.xml' ||
+            path.startsWith('/__sitemap__/') ||
+            path.startsWith('/__nuxt_content/') ||
+            path.startsWith('/_i18n/')
+          )
+      ]
+    }
   }
 })
