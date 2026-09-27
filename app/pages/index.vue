@@ -498,20 +498,15 @@
           >
             <img
               src="/images/vault.jpg"
-              alt="Bitcoin vault structure"
+              alt="Steel plate being engraved for a Bitcoin backup"
               class="h-72 w-full object-cover"
             >
             <div class="p-6">
               <p class="text-muted-foreground">
-                {{ t('rightWay.vaultDesc') }}
+                {{ t('rightWay.structurePre') }}
                 <br>
                 <strong class="font-semibold text-white"
-                  >{{ t('rightWay.spending') }}</strong
-                >, <strong class="font-semibold text-white">
-                  {{ t('rightWay.savings') }}
-                </strong>, and
-                <strong class="font-semibold text-white"
-                  >{{ t('rightWay.vault') }}</strong
+                  >{{ t('rightWay.structure') }}</strong
                 >
               </p>
             </div>
