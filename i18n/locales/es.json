@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "Planificación Patrimonial Bitcoin",
-    "description": "Autocustodia con las herramientas, capacitación y protocolos adecuados para que tu patrimonio se mantenga seguro, utilizable y sobrevivible para tu familia y legado a largo plazo."
+    "description": "Planificación patrimonial y asesoría de autocustodia para familias que conservan Bitcoin a largo plazo. Dinero sano, protegido junto a todo lo que hace tu familia. Nunca tenemos tus llaves."
   },
   "nav": {
     "home": "Inicio",
@@ -236,5 +236,174 @@
     "bookCta": "Comprueba si calificas para una sesión estratégica",
     "whatsappMessage": "Hola Schelling Point, quiero ayuda para construir mi Plan Patrimonial de Bitcoin bajo mi propia custodia. Esta es mi situación:",
     "takeQuiz": "Quiz de Autocustodia"
+  },
+  "home": {
+    "nav": {
+      "whatWeDo": "Qué hacemos",
+      "engagements": "Servicios",
+      "stewardship": "Acompañamiento",
+      "about": "Quiénes somos",
+      "appointment": "Con cita previa",
+      "menu": "Menú"
+    },
+    "hero": {
+      "eyebrow": "Planificación patrimonial Bitcoin · Con cita previa",
+      "title": "Bitcoin, como",
+      "titleEm": "patrimonio familiar.",
+      "tagline": "Dinero sano, protegido junto a todo lo que hace tu familia.",
+      "lede": "Estructuras de custodia, herencia y continuidad para personas y familias que conservan Bitcoin a largo plazo.",
+      "vow": "Nunca tenemos tus llaves.",
+      "cta": "Solicita una conversación confidencial",
+      "places": "Madeira · El Salvador"
+    },
+    "held": {
+      "label": "Cómo se custodia",
+      "title": "Diseñado para que ningún fallo aislado pueda hacerlo perder.",
+      "titleEm": "Ni dejarlo fuera del alcance de quienes deben recibirlo.",
+      "family": "Tu familia",
+      "alongside": "Schelling Point, a tu lado",
+      "optional": "Opcional",
+      "i1": "Multifirma de varios fabricantes",
+      "d1": "Llaves en dispositivos de distintos fabricantes, guardadas en lugares distintos. Ningún dispositivo, empresa o persona puede mover los fondos por sí solo.",
+      "i2": "Recuperación con demora",
+      "d2": "Si lo eliges, una vía para tus herederos que solo se abre tras el plazo que tú definas, para que nada cambie de manos antes de tiempo ni quede bloqueado.",
+      "i3": "Respaldos redundantes",
+      "d3": "A prueba de manipulación y en ubicaciones separadas, para que perder un lugar nunca signifique perderlo todo.",
+      "i4": "Recuperación ensayada",
+      "d4": "Redactada para que tu cónyuge o albacea pueda seguirla, y practicada contigo antes del día en que haga falta.",
+      "fine": "Cada estructura se diseña en torno a tu familia y a tus asesores actuales.",
+      "fineLink": "Cómo trabajamos la multifirma"
+    },
+    "inter": {
+      "label": "A lo largo de generaciones",
+      "title": "El patrimonio familiar suele",
+      "titleEm": "diluirse con las generaciones.",
+      "body": "Por estructuras débiles, herederos que no entienden lo que tienen, planes que nadie escribió ni practicó, y consejos que no encajaban.",
+      "alt": "Un abuelo y su nieto recogiendo uvas juntos en un viñedo a última hora de la tarde."
+    },
+    "do": {
+      "label": "Qué hacemos",
+      "title": "Para familias,",
+      "titleEm": "y para los profesionales que las acompañan.",
+      "side": "Cada servicio puede contratarse por separado, aunque la mayoría de las familias prefiere combinarlos. Consulta los servicios completos más abajo.",
+      "setupName": "Configuración de autocustodia",
+      "setupDesc": "Llevamos tu Bitcoin a una custodia directa que puedas entender, operar y mantener, documentada en tu propio marco.",
+      "reviewName": "Revisión de seguridad",
+      "reviewDesc": "Una segunda opinión confidencial sobre la configuración que ya tienes: arquitectura, manejo de llaves, respaldos y preparación para la herencia, con prioridades por escrito.",
+      "inheritName": "Planificación de herencia y redundancia",
+      "inheritDesc": "Cómo se transmite tu patrimonio en caso de fallecimiento, incapacidad o pérdida de quien guarda una llave, coordinado con tu abogado y tus documentos sucesorios.",
+      "contName": "Plan de continuidad",
+      "contDesc": "La relación que continúa. Revisiones periódicas, cambios en tu situación y un contacto conocido cuando surja una duda, durante el tiempo que nos necesites.",
+      "contFee": "Desde $350",
+      "oneTime": "Pago único",
+      "perYear": "Por año",
+      "start": "Todo servicio comienza con una evaluación inicial.",
+      "startStrong": "No tiene costo.",
+      "advisory": "Asesoría continua, $250 por hora"
+    },
+    "run": {
+      "label": "Cómo es el proceso",
+      "title": "La configuración lleva un día.",
+      "titleEm": "El acompañamiento, toda la vida.",
+      "sub": "Podemos dejarte configurado en pocos días, y te ayudaremos a cuidar ese patrimonio toda la vida.",
+      "w1": "Primero",
+      "s1": "Una conversación confidencial",
+      "d1": "Dónde estás, para qué lo conservas y quién más está involucrado. Sin costo ni compromiso.",
+      "w2": "Después",
+      "s2": "Diseño",
+      "d2": "Una estructura por escrito y una tarifa fija, acordadas antes de mover nada.",
+      "w3": "Pocos días",
+      "s3": "Configuración",
+      "d3": "La construimos contigo, verificada paso a paso y documentada a medida que avanzamos.",
+      "w4": "Antes de necesitarlo",
+      "s4": "Traspaso",
+      "d4": "Tu cónyuge o heredero recorre la recuperación con nosotros, y se ensaya.",
+      "w5": "Durante años",
+      "s5": "Acompañamiento",
+      "d5": "Revisiones a medida que cambian tu familia, tu patrimonio y tus circunstancias.",
+      "alongside": "Schelling Point, a tu lado",
+      "leave": "Puedes irte cuando quieras,",
+      "leaveEm": "con pleno control de todo lo que te pertenece."
+    },
+    "fees": {
+      "label": "Servicios y tarifas",
+      "title": "Tarifas fijadas por escrito,",
+      "titleEm": "antes de empezar.",
+      "side": "Tres servicios reúnen todo lo anterior. Cada uno incluye su primer año de continuidad.",
+      "cta": "Comienza con una evaluación",
+      "contLabel": "Después del primer año",
+      "contTitle": "Planes de continuidad",
+      "contBody": "La relación que mantiene la estructura funcionando a medida que cambia la vida, renovada cada año.",
+      "contCaption": "Niveles del plan de continuidad y tarifas anuales",
+      "essential": "Esencial",
+      "essentialDesc": "Revisión anual y actualizaciones",
+      "essentialFee": "$350 / año",
+      "advanced": "Avanzado",
+      "advancedDesc": "Una revisión anual más profunda, con apoyo durante el año",
+      "advancedFee": "$800–1,200 / año",
+      "premium": "Premium",
+      "premiumDesc": "Servicio completo y acceso prioritario",
+      "premiumFee": "Desde $2,000 / año",
+      "term1": "Cotizado en dólares estadounidenses y fijado por escrito antes de empezar.",
+      "term2": "Pagadero en Bitcoin.",
+      "term3": "Los clientes de continuidad tienen un 20% de descuento sobre la tarifa estándar de asesoría."
+    },
+    "words": {
+      "label": "En sus palabras"
+    },
+    "tools": {
+      "walletSoftware": "Software de billetera",
+      "signingDevice": "Dispositivo de firma",
+      "multisigWallet": "Billetera multifirma",
+      "timeDelayed": "Recuperación con demora",
+      "privateComms": "Comunicación privada"
+    },
+    "founder": {
+      "label": "El fundador",
+      "heading": "Sobre el fundador",
+      "quote": "Un actuario mira décadas por delante.",
+      "quoteEm": "Es el único horizonte que importa para el patrimonio familiar.",
+      "body": "Schelling Point fue fundada por Charlie Stevens. Su formación es actuarial: medir el riesgo en horizontes largos y asegurar que el dinero esté ahí cuando una familia lo necesita. Desde 2017 acompaña a personas y empresas en la custodia de Bitcoin, en Europa y América Latina.",
+      "role": "Fundador",
+      "alt": "Charlie Stevens, fundador de Schelling Point."
+    },
+    "playbook": {
+      "label": "Descarga gratuita"
+    },
+    "faq": {
+      "label": "Preguntas",
+      "title": "Las que más",
+      "titleEm": "nos hacen.",
+      "multisigLink": "Más sobre multifirma",
+      "q1": "¿Alguna vez tienen mi Bitcoin o mis llaves?",
+      "a1": "No, en ningún momento. Cada estructura que diseñamos deja las llaves contigo y con las personas que tú elijas, y puedes terminar la relación cuando quieras con pleno control.",
+      "q2": "No soy una persona técnica. ¿Esto es para mí?",
+      "a2": "La mayoría de nuestros clientes no lo son. La configuración se construye en torno a lo que puedes operar y explicar a tu familia, y cada paso queda escrito en lenguaje claro.",
+      "q3": "¿Qué pasa con mi Bitcoin si me ocurre algo?",
+      "a3": "Tu familia cuenta con un plan de recuperación por escrito, ensayado de antemano, y un contacto directo en Schelling Point que la guía en el proceso.",
+      "q4": "¿Trabajan con nuestro abogado y contador?",
+      "a4": "Sí. Trabajamos junto a tus asesores actuales y nos ocupamos de la parte específica de Bitcoin que queda fuera de su práctica.",
+      "q5": "¿Trabajan con multifirma?",
+      "a5": "Sí. Para patrimonios mayores solemos recomendar multifirma de varios fabricantes, para que ningún dispositivo, fabricante o persona sea un punto único de fallo.",
+      "q6": "¿Dan asesoría de inversión?",
+      "a6": "No. Diseñamos la estructura en torno a lo que ya tienes. Qué comprar, vender o conservar sigue siendo tu decisión."
+    },
+    "close": {
+      "label": "Con cita previa",
+      "titleEm": "Si no puedes localizarme,",
+      "title": "llama a Schelling Point.",
+      "sub": "La frase que nos gustaría ver en las instrucciones de recuperación de cada familia. Todo empieza con una conversación confidencial."
+    },
+    "footer": {
+      "conf": "Asesoría confidencial para Bitcoin conservado como patrimonio familiar. Nunca tenemos las llaves de nuestros clientes ni custodiamos sus fondos.",
+      "firm": "La firma",
+      "reading": "Lecturas",
+      "appointment": "Con cita previa",
+      "conversation": "Una conversación confidencial",
+      "estatePlanning": "Planificación patrimonial Bitcoin",
+      "multisig": "Multifirma",
+      "blog": "Blog",
+      "playbook": "El Manual del Patrimonio Bitcoin"
+    }
   }
 }

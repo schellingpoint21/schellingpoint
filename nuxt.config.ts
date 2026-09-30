@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite'
 const SITE_URL = 'https://schellingpoint.xyz'
 const SITE_TITLE = 'Bitcoin Estate Planning & Self-Custody Advisory'
 const SITE_DESCRIPTION =
-  'Self custody your Bitcoin for your family or organisation with the right tools, training, and protocols so your capital stays secure, usable, and survivable for the right purpose at the right time.'
+  'Bitcoin estate planning and self-custody advisory for families holding Bitcoin for the long term. Sound money, secured alongside everything your family does. We never hold your keys.'
 
 export default defineNuxtConfig({
   app: {
@@ -69,6 +69,19 @@ export default defineNuxtConfig({
         name: 'Poppins',
         provider: 'google',
         weights: [400, 500, 600, 700]
+      },
+      // Homepage redesign: Gelasio (Georgia stand-in) for headlines, Carlito (Calibri stand-in) for body.
+      {
+        name: 'Gelasio',
+        provider: 'google',
+        weights: [400, 500],
+        styles: ['normal', 'italic']
+      },
+      {
+        name: 'Carlito',
+        provider: 'google',
+        weights: [400, 700],
+        styles: ['normal', 'italic']
       }
     ]
   },
