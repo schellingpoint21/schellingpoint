@@ -91,7 +91,7 @@
     "navLabel": "Free Playbook",
     "badge": "Free Download",
     "heading": "Get the Bitcoin Estate Playbook",
-    "body": "A principled handbook for holding, securing, and passing on Bitcoin within a family estate. Enter your details and we'll email it to you straight away.",
+    "body": "A handbook for the ages: holding, securing and passing on Bitcoin within a family estate. Enter your details and we'll email it to you straight away.",
     "cta": "Get the Playbook"
   },
   "whoWeAre": {
@@ -143,7 +143,7 @@
     "legacySats": "~10,900,000 sats",
     "legacyFeature1": "Everything in Family",
     "legacyFeature2": "Multi-vendor multisig vault — keys held on hardware from independent manufacturers",
-    "legacyFeature3": "Quorum designed around your family's real risks (2-of-3 or 3-of-5)",
+    "legacyFeature3": "A map of keyholders designed around your family (2-of-3 or 3-of-5)",
     "legacyFeature4": "Guided key ceremony with verified backups — we never see or hold your keys",
     "legacyFeature5": "Geographically redundant, tamper-evident backups with full recovery documentation",
     "legacyFeature6": "Heir training and a rehearsed recovery drill, reviewed annually in person",
@@ -244,33 +244,34 @@
       "stewardship": "Stewardship",
       "about": "About",
       "appointment": "By appointment",
-      "menu": "Menu"
+      "menu": "Menu",
+      "glossary": "Glossary"
     },
     "hero": {
       "eyebrow": "Bitcoin estate planning · By appointment",
-      "title": "Bitcoin, held as",
-      "titleEm": "family capital.",
-      "tagline": "Sound money, secured alongside everything your family does.",
-      "lede": "Custody, inheritance and continuity structures for individuals and families holding Bitcoin for the long term.",
+      "title": "Bitcoin – your wealth,",
+      "titleEm": "held as family capital.",
+      "tagline": "Money that can't be printed away, kept as safe and secure as your family.",
+      "lede": "We guide you to hold your own money and pass it on to your loved ones, with it in your own hands the whole time.",
       "vow": "We never hold your keys.",
-      "cta": "Arrange a confidential conversation",
+      "cta": "Arrange a free, confidential consultation",
       "places": "Madeira · El Salvador"
     },
     "held": {
       "label": "How it is held",
-      "title": "Built so that no single failure can lose it.",
-      "titleEm": "Or lock it away from the people it is for.",
+      "title": "Security is arranged so there is no single point of failure.",
+      "titleEm": "Your wealth stays with your family.",
       "family": "Your family",
-      "alongside": "Schelling Point, alongside",
+      "alongside": "Schelling Point, with you for life",
       "optional": "Optional",
       "i1": "Multi-vendor multisig",
-      "d1": "Keys on devices from different makers, held in different places. No single device, company or person can move funds alone.",
+      "d1": "Different keys and codes are held by people and in places trusted and chosen by you. No single person can move the money by themselves.",
       "i2": "Time-delayed recovery",
-      "d2": "If you choose it, a path for your heirs that opens only after a period you set, so nothing changes hands early and nothing is stranded.",
-      "i3": "Redundant backups",
-      "d3": "Tamper-evident and geographically separate, so the loss of one place is never the loss of everything.",
+      "d2": "If you choose it, a proof-of-life protocol that makes your money accessible to your heirs after a time frame chosen by you.",
+      "i3": "Alternative backups",
+      "d3": "So no matter what happens, you always have a plan B to move or access your money.",
       "i4": "Rehearsed recovery",
-      "d4": "Written so a spouse or executor can follow it, and practised with you, before the day it is needed.",
+      "d4": "Written so a spouse or executor can follow it, and practised with you before the day it is needed.",
       "fine": "Each structure is designed around your family and your existing advisers.",
       "fineLink": "How we approach multisig"
     },
@@ -279,27 +280,31 @@
       "title": "Family wealth has been known",
       "titleEm": "to thin out over generations.",
       "body": "Through weak structures, heirs who don't understand what they hold, plans no one wrote down or practised, and advice that didn't fit.",
-      "alt": "A grandfather and his grandson picking grapes together in a vineyard in late afternoon light."
+      "alt": "A grandfather and his grandson picking grapes together in a vineyard in late afternoon light.",
+      "solve": "Schelling Point helps you avoid these common, yet easily avoidable, mistakes.",
+      "casesLink": "Three family scenarios"
     },
     "do": {
-      "label": "What we do",
-      "title": "For families,",
-      "titleEm": "and the professionals that serve those families.",
-      "side": "Each service can stand on its own, yet most families decide to combine them. See further engagements below.",
+      "label": "Individual services",
+      "title": "Fees fixed in writing,",
+      "titleEm": "before anything begins.",
+      "side": "Each service can also stand on its own, so you can mix and match.",
       "setupName": "Self-Custody Setup",
-      "setupDesc": "Moving your Bitcoin into direct custody you can understand, operate and maintain, documented in your own framework.",
+      "setupDesc": "Your Bitcoin under your direct control and in your own hands, with a report explaining everything you need to know: how to use it, where to find it and how to move it.",
       "reviewName": "Security Review",
-      "reviewDesc": "A confidential second opinion on a setup you already have: architecture, key handling, backups and inheritance readiness, with priorities in writing.",
+      "reviewDesc": "If you are already set up, we review what you have, from security and key handling to backups and inheritance readiness, and give you a written report with a recommendation on each point.",
       "inheritName": "Inheritance & Redundancy Planning",
-      "inheritDesc": "How your holdings pass on through death, incapacity or the loss of a key holder, coordinated with your lawyer and your existing estate documents.",
+      "inheritDesc": "Making sure your wealth is passed on to the people you want it passed on to. We coordinate with your existing lawyer or other estate professionals.",
       "contName": "Continuity Plan",
-      "contDesc": "The continuing relationship. Periodic reviews, changes in circumstance, and a known contact when a question arises, for as long as you need us.",
+      "contDesc": "We don't just advise you and leave. We are with you every step of the way: periodic reviews, changes to your plan as circumstances change, and a known contact for your loved ones in an emergency.",
       "contFee": "From $350",
       "oneTime": "One-time",
       "perYear": "Per year",
       "start": "Every engagement begins with an introductory assessment.",
       "startStrong": "There is no charge for it.",
-      "advisory": "Ongoing advisory, $250 per hour"
+      "advisory": "Ongoing advisory, $250 per hour",
+      "glossaryNote": "If any of the terms on this page are unfamiliar,",
+      "glossaryLink": "the glossary explains them in plain language."
     },
     "run": {
       "label": "How an engagement runs",
@@ -307,7 +312,7 @@
       "titleEm": "Stewardship is a lifetime.",
       "sub": "We can get you set up in a few days, and will help you steward the capital for a lifetime.",
       "w1": "First",
-      "s1": "A confidential conversation",
+      "s1": "A free, confidential consultation",
       "d1": "Where you stand, what you hold it for, and who else is involved. No cost and no obligation.",
       "w2": "Then",
       "s2": "Design",
@@ -317,23 +322,23 @@
       "d3": "Built with you, verified as we go, and documented as we build it.",
       "w4": "Before you need it",
       "s4": "Handover",
-      "d4": "Your spouse or heir walks through recovery with us, and it is rehearsed.",
+      "d4": "We go through the whole framework with your spouse or heir, with a full walkthrough, so they are fully informed.",
       "w5": "For years",
       "s5": "Stewardship",
       "d5": "Reviews as your family, holdings and circumstances change.",
-      "alongside": "Schelling Point, alongside",
+      "alongside": "Schelling Point, with you for life",
       "leave": "You can walk away at any time,",
       "leaveEm": "in full control of everything you own."
     },
     "fees": {
-      "label": "Engagements and fees",
+      "label": "Engagements",
       "title": "Fees fixed in writing,",
       "titleEm": "before anything begins.",
-      "side": "Three engagements bring the services together. Each includes its first year of continuity.",
+      "side": "Most families choose one of these engagements. Each brings the services together and includes its first year of continuity.",
       "cta": "Begin with an assessment",
       "contLabel": "After the first year",
       "contTitle": "Continuity Plans",
-      "contBody": "The relationship that keeps a structure working as life changes, renewed each year.",
+      "contBody": "Ongoing support on an annual basis.",
       "contCaption": "Continuity Plan tiers and annual fees",
       "essential": "Essential",
       "essentialDesc": "Annual check-in and updates",
@@ -346,7 +351,9 @@
       "premiumFee": "From $2,000 / yr",
       "term1": "Quoted in US dollars and fixed in writing before we begin.",
       "term2": "Payable in Bitcoin.",
-      "term3": "Continuity clients receive 20% off the standard advisory rate."
+      "term3": "Continuity clients receive 20% off the standard advisory rate.",
+      "engTitle": "For families,",
+      "engTitleEm": "and the professionals that serve those families."
     },
     "words": {
       "label": "In their words"
@@ -363,7 +370,7 @@
       "heading": "About the founder",
       "quote": "An actuary looks decades ahead.",
       "quoteEm": "That is the only horizon that matters for family capital.",
-      "body": "Schelling Point was founded by Charlie Stevens. His background is actuarial: weighing risk over long horizons, and making sure the money is there when a family needs it. He has guided individuals and businesses through Bitcoin custody since 2017, in Europe and Latin America.",
+      "body": "Schelling Point was founded by Charlie Stevens. His background is actuarial: weighing risk over long time frames, and making sure the money is there when a family needs it. He has guided individuals and businesses through Bitcoin custody since 2017, in Europe and Latin America.",
       "role": "Founder",
       "alt": "Charlie Stevens, founder of Schelling Point."
     },
@@ -392,7 +399,8 @@
       "label": "By appointment",
       "titleEm": "If you can't reach me,",
       "title": "call Schelling Point.",
-      "sub": "The line we would like to see in every family's recovery instructions. It begins with a confidential conversation."
+      "sub": "We help you add this one line to your important Bitcoin documents. If something happens, your family knows who to call. We confirm who they are, then walk them through the plan you left, step by step. We never hold your keys, so we guide; your family acts.",
+      "whatsapp": "Or, if you prefer, a message on WhatsApp."
     },
     "footer": {
       "conf": "Confidential advisory for Bitcoin held as family capital. We never hold client keys or take custody of client funds.",
@@ -403,7 +411,39 @@
       "estatePlanning": "Bitcoin estate planning",
       "multisig": "Multisig",
       "blog": "Journal",
-      "playbook": "The Bitcoin Estate Playbook"
+      "playbook": "The Bitcoin Estate Playbook",
+      "glossary": "Glossary",
+      "cases": "Three family scenarios",
+      "whatsapp": "WhatsApp"
+    },
+    "cases": {
+      "label": "Three families",
+      "title": "How wealth slips away,",
+      "titleEm": "and how it need not.",
+      "body": "Three short scenarios, one about a family home and two about Bitcoin, showing the everyday mistakes that cost families most, and what we would do differently.",
+      "link": "Read the three scenarios"
+    },
+    "glossaryPage": {
+      "label": "Glossary",
+      "title": "The words we use,",
+      "titleEm": "in plain language.",
+      "intro": "Bitcoin has its own vocabulary. Here is what each term on our site means, in everyday words. If something is still unclear, ask us; that is what the first conversation is for.",
+      "seoTitle": "Bitcoin Glossary in Plain Language",
+      "seoDescription": "Plain-language definitions of the Bitcoin terms we use: keys, self-custody, multisig, time-delayed recovery, stewardship and more.",
+      "jump": "Jump to a letter",
+      "cta": "Arrange a free, confidential consultation"
+    },
+    "casesPage": {
+      "label": "Three families",
+      "title": "How wealth slips away,",
+      "titleEm": "and how it need not.",
+      "intro": "Most family wealth is not lost to markets. It is lost to small, ordinary mistakes that nobody noticed until it was too late. Here are three of them.",
+      "note": "These scenarios are illustrative, drawn from situations common to many families. They are not accounts of our clients.",
+      "seoTitle": "Three Family Scenarios: How Wealth Is Lost and Kept",
+      "seoDescription": "Three short scenarios showing common mistakes that cost families their wealth, in property and in Bitcoin, and what Schelling Point would do differently.",
+      "closeTitle": "If any of these feel familiar,",
+      "closeTitleEm": "we would be glad to talk.",
+      "cta": "Arrange a free, confidential consultation"
     }
   }
 }
