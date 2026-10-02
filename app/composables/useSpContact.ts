@@ -1,7 +1,7 @@
 // Contact details shared by the redesigned pages.
 export const useSpContact = () => {
   const { t } = useI18n()
-  const BOOKING_URL = 'https://calendly.com/charlie-schellingpoint-jwgf/30min'
+  const BOOKING_URL = 'https://cal.com/charlie-stevens-m8gq3n/15min'
   const EMAIL = 'charlie@schellingpoint.xyz'
   // WhatsApp (+503 7020 4642) with the site's existing pre-filled opening message.
   const whatsappUrl = computed(
