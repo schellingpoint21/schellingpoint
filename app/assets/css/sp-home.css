@@ -102,6 +102,19 @@
 .sp-nav a{font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--sp-mute);transition-property:color;transition-duration:150ms;transition-timing-function:ease-out}
 @media (hover:hover) and (pointer:fine){.sp-nav a:hover{color:var(--sp-paper)}}
 .sp-head .appt{white-space:nowrap}
+.sp-drop{position:relative}
+.sp-drop-btn{display:inline-flex;align-items:center;gap:.55em;background:none;border:0;padding:0;cursor:pointer;font:inherit;font-family:var(--sp-sans);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--sp-mute);transition-property:color;transition-duration:150ms;transition-timing-function:ease-out}
+.sp-drop-btn .caret{width:5px;height:5px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform 150ms ease-out}
+.sp-drop.is-open .sp-drop-btn{color:var(--sp-paper)}
+.sp-drop.is-open .sp-drop-btn .caret{transform:translateY(1px) rotate(-135deg)}
+@media (hover:hover) and (pointer:fine){.sp-drop-btn:hover{color:var(--sp-paper)}}
+.sp-drop-panel{position:absolute;left:50%;top:100%;transform:translateX(-50%);padding-top:18px;min-width:260px}
+.sp-drop-panel[hidden]{display:none}
+.sp-drop-panel::before{content:"";position:absolute;inset:18px 0 0;background:var(--sp-ink-2);box-shadow:var(--ring);z-index:-1}
+.sp-drop-panel a{display:block;padding:11px 22px;white-space:nowrap;letter-spacing:.12em}
+.sp-drop-panel a:first-child{padding-top:20px}.sp-drop-panel a:last-child{padding-bottom:20px}
+.sp-menu .menu-group{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--sp-mute-2);margin-top:6px;padding-top:14px;border-top:1px solid var(--sp-rule)}
+.sp-menu nav a.menu-sub{padding-left:14px;font-size:13px}
 
 .sp-menu{position:relative}
 .sp-menu summary{list-style:none;cursor:pointer;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--sp-mute);padding:6px 0}
