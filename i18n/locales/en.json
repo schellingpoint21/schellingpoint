@@ -256,6 +256,14 @@
       "cta": "Arrange a confidential conversation",
       "places": "Madeira · El Salvador"
     },
+    "film": {
+      "label": "A short film · 1:22",
+      "aria": "Schelling Point brand film",
+      "play": "Play the film",
+      "replay": "Watch again",
+      "soundOn": "Sound on",
+      "soundOff": "Sound off"
+    },
     "held": {
       "label": "How it is held",
       "title": "Built so that no single failure can lose it.",
