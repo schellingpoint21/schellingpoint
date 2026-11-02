@@ -164,14 +164,19 @@
 </template>
 
 <style scoped>
+  /* full-bleed: edge to edge, no side margins */
+  .sp-film {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .sp-film .frame {
     position: relative;
-    /* centred; capped so the whole frame, controls included, fits one screen height */
-    margin: 0 auto;
-    max-width: calc((100svh - 200px) * 1906 / 1080);
+    margin: 0;
+    width: 100%;
     aspect-ratio: 1906 / 1080;
+    /* never taller than the screen below the header; the video crops top and bottom (captions sit mid-frame) */
+    max-height: calc(100svh - 82px);
     background: #000;
-    box-shadow: var(--ring);
     overflow: hidden;
   }
   .sp-film video {
@@ -197,7 +202,7 @@
 
   .sp-film .sound {
     position: absolute;
-    left: clamp(10px, 2vw, 22px);
+    left: var(--sp-gutter);
     bottom: clamp(10px, 2vw, 22px);
     display: inline-flex;
     align-items: center;
@@ -231,7 +236,7 @@
 
   .sp-film .play {
     position: absolute;
-    right: clamp(10px, 2vw, 22px);
+    right: var(--sp-gutter);
     bottom: clamp(10px, 2vw, 22px);
     display: inline-flex;
     align-items: center;
