@@ -2,8 +2,8 @@
   // Brand film band (Nov 2026), placed directly below the hero.
   // Weight: preload="none" + poster, so nothing downloads until playback starts;
   // phones get the 720p file (~6 MB), wider screens the 1080p file (~12 MB).
-  // Behaviour: plays once, muted, when mostly in view; pauses when scrolled away;
-  // never autoplays under prefers-reduced-motion. "Sound on" restarts from the top
+  // Behaviour: plays once, muted, for every visitor when half in view; pauses when
+  // scrolled away. "Sound on" restarts from the top
   // the first time, so the music is heard from the beginning.
   const { t } = useI18n()
 
@@ -13,7 +13,6 @@
   const ended = ref(false)
   const heardSound = ref(false)
   let userPaused = false
-  let reduceMotion = false
   let io: IntersectionObserver | null = null
 
   // Autoplay can be refused (e.g. low-power mode); the play button then stays visible.
@@ -77,7 +76,6 @@
     if (!v) {
       return
     }
-    reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     if (!('IntersectionObserver' in window)) {
       return
     }
@@ -87,7 +85,7 @@
           return
         }
         if (e.intersectionRatio >= 0.5) {
-          if (!(reduceMotion || userPaused || ended.value) && v.paused) {
+          if (!(userPaused || ended.value) && v.paused) {
             play()
           }
         } else if (!v.paused) {
@@ -103,12 +101,7 @@
 </script>
 
 <template>
-  <section
-    class="sp-sec sp-film"
-    :aria-label="t('home.film.label')"
-    data-reveal
-  >
-    <p class="sp-label sp-fade">{{ t('home.film.label') }}</p>
+  <section class="sp-sec sp-film" :aria-label="t('home.film.aria')" data-reveal>
     <figure class="frame sp-fade" style="--d: 0.12s">
       <video
         ref="video"
@@ -173,9 +166,9 @@
 <style scoped>
   .sp-film .frame {
     position: relative;
-    margin: 2rem 0 0;
-    /* keep the whole frame, controls included, inside one screen height */
-    max-width: calc((100svh - 280px) * 1906 / 1080);
+    /* centred; capped so the whole frame, controls included, fits one screen height */
+    margin: 0 auto;
+    max-width: calc((100svh - 200px) * 1906 / 1080);
     aspect-ratio: 1906 / 1080;
     background: #000;
     box-shadow: var(--ring);
