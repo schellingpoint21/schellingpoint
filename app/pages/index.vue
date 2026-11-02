@@ -545,6 +545,7 @@
           <li><NuxtLink :to="localePath('/resources/bitcoin-estate-planning')">{{ t('home.footer.estatePlanning') }}</NuxtLink></li>
           <li><NuxtLink :to="localePath('/multisig')">{{ t('home.footer.multisig') }}</NuxtLink></li>
           <li><NuxtLink :to="localePath('/blog')">{{ t('home.footer.blog') }}</NuxtLink></li>
+          <li><NuxtLink :to="localePath('/case-studies')">{{ t('home.footer.caseStudies') }}</NuxtLink></li>
           <li><a href="#playbook">{{ t('home.footer.playbook') }}</a></li>
         </ul>
       </div>
