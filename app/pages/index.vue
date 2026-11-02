@@ -6,6 +6,7 @@
   definePageMeta({ layout: false })
 
   const { t, locale } = useI18n()
+  const { formatSats } = useSats()
   const localePath = useLocalePath()
   const switchLocalePath = useSwitchLocalePath()
 
@@ -53,6 +54,7 @@
       title: t('packages.foundationTitle'),
       who: t('packages.foundationWho'),
       price: t('packages.foundationPrice'),
+      sats: formatSats(parseUsd(t('packages.foundationPrice'))),
       features: [1, 2, 3, 4].map((i) => t(`packages.foundationFeature${i}`)),
       included: [t('packages.foundationFeature5')],
       cta: t('home.fees.cta')
@@ -64,8 +66,9 @@
       badge: t('packages.familyBadge'),
       pick: true,
       price: t('packages.familyPrice'),
-      features: [1, 2, 3, 4].map((i) => t(`packages.familyFeature${i}`)),
-      included: [t('packages.familyFeature5'), t('packages.familyFeature6')],
+      sats: formatSats(parseUsd(t('packages.familyPrice'))),
+      features: [1, 2, 3, 4, 5].map((i) => t(`packages.familyFeature${i}`)),
+      included: [t('packages.familyFeature6'), t('packages.familyFeature7')],
       cta: t('home.fees.cta')
     },
     {
@@ -73,6 +76,7 @@
       title: t('packages.legacyTitle'),
       who: t('packages.legacyWho'),
       price: t('packages.legacyPrice'),
+      sats: formatSats(parseUsd(t('packages.legacyPrice'))),
       features: [1, 2, 3, 4, 5, 6].map((i) => t(`packages.legacyFeature${i}`)),
       included: [t('packages.legacyFeature7')],
       cta: t('packages.legacyCta')
@@ -369,6 +373,7 @@
             <h3 :id="`pk-${tier.key}`">{{ tier.title }}</h3>
             <p class="who">{{ tier.who }}</p>
             <p class="price"><b>{{ tier.price }}</b><span>{{ t('packages.oneTime') }}</span></p>
+            <p class="sats">{{ tier.sats }}</p>
             <ul>
               <li v-for="f in tier.features" :key="f">{{ f }}</li>
               <li v-for="f in tier.included" :key="f" class="inc">{{ f }}</li>
@@ -842,6 +847,7 @@
 .sp-fees .price{margin:1.6rem 0 0;display:flex;align-items:baseline;gap:.8rem;font-variant-numeric:tabular-nums lining-nums}
 .sp-fees .price b{font-family:var(--sp-serif);font-weight:400;font-size:clamp(2rem,3.4vw,2.6rem);letter-spacing:-.01em}
 .sp-fees .price span{color:var(--sp-mute);font-size:.9rem}
+.sp-fees .sats{margin:.35rem 0 0;color:var(--sp-mute);font-size:.85rem;letter-spacing:.02em;font-variant-numeric:tabular-nums lining-nums}
 .sp-fees ul{list-style:none;margin:1.8rem 0 0;padding:0;display:grid;gap:.75rem;align-content:start;flex:1}
 .sp-fees li{position:relative;padding-left:1.3rem;color:var(--sp-paper);font-size:.98rem;line-height:1.5}
 .sp-fees li::before{content:"";position:absolute;left:0;top:.62em;width:.6rem;height:1px;background:var(--sp-mute)}
