@@ -259,6 +259,13 @@
       "cta": "Arrange a free, confidential consultation",
       "places": "Madeira · El Salvador"
     },
+    "film": {
+      "aria": "Schelling Point brand film",
+      "play": "Play the film",
+      "replay": "Watch again",
+      "soundOn": "Sound on",
+      "soundOff": "Sound off"
+    },
     "held": {
       "label": "How it is held",
       "title": "Security is arranged so there is no single point of failure.",

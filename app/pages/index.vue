@@ -204,6 +204,9 @@
         </div>
       </section>
 
+      <!-- 1b · Brand film -->
+      <HomeBrandFilm />
+
       <!-- 2 · How it is held -->
       <section class="sp-sec sp-held" aria-labelledby="h-held" data-reveal>
         <p class="sp-label">{{ t('home.held.label') }}</p>

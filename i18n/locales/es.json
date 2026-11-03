@@ -259,6 +259,13 @@
       "cta": "Solicita una consulta gratuita y confidencial",
       "places": "Madeira · El Salvador"
     },
+    "film": {
+      "aria": "Video de marca de Schelling Point",
+      "play": "Ver el video",
+      "replay": "Ver de nuevo",
+      "soundOn": "Activar sonido",
+      "soundOff": "Silenciar"
+    },
     "held": {
       "label": "Cómo se custodia",
       "title": "La seguridad se organiza para que no exista un punto único de fallo.",
