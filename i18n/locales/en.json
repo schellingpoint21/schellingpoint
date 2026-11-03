@@ -10,6 +10,7 @@
     "faq": "FAQ",
     "resources": "Resources",
     "blog": "Blog",
+    "caseStudies": "Case Studies",
     "getStarted": "Get started"
   },
   "hero": {
@@ -404,7 +405,8 @@
       "estatePlanning": "Bitcoin estate planning",
       "multisig": "Multisig",
       "blog": "Journal",
-      "playbook": "The Bitcoin Estate Playbook"
+      "playbook": "The Bitcoin Estate Playbook",
+      "caseStudies": "Case studies"
     }
   }
 }

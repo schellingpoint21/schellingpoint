@@ -63,6 +63,14 @@
                 {{ t('nav.blog') }}
               </NuxtLink>
             </li>
+            <li>
+              <NuxtLink
+                :to="localePath('/case-studies')"
+                class="text-sm text-muted-foreground transition-colors hover:text-white"
+              >
+                {{ t('nav.caseStudies') }}
+              </NuxtLink>
+            </li>
           </ul>
         </div>
 
