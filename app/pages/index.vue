@@ -6,6 +6,7 @@
   definePageMeta({ layout: false })
 
   const { t, locale } = useI18n()
+  const { formatSats } = useSats()
   const localePath = useLocalePath()
 
   const { BOOKING_URL, EMAIL, whatsappUrl } = useSpContact()
@@ -51,6 +52,7 @@
       title: t('packages.foundationTitle'),
       who: t('packages.foundationWho'),
       price: t('packages.foundationPrice'),
+      sats: formatSats(parseUsd(t('packages.foundationPrice'))),
       features: [1, 2, 3, 4].map((i) => t(`packages.foundationFeature${i}`)),
       included: [t('packages.foundationFeature5')],
       cta: t('home.fees.cta')
@@ -62,8 +64,9 @@
       badge: t('packages.familyBadge'),
       pick: true,
       price: t('packages.familyPrice'),
-      features: [1, 2, 3, 4].map((i) => t(`packages.familyFeature${i}`)),
-      included: [t('packages.familyFeature5'), t('packages.familyFeature6')],
+      sats: formatSats(parseUsd(t('packages.familyPrice'))),
+      features: [1, 2, 3, 4, 5].map((i) => t(`packages.familyFeature${i}`)),
+      included: [t('packages.familyFeature6'), t('packages.familyFeature7')],
       cta: t('home.fees.cta')
     },
     {
@@ -71,6 +74,7 @@
       title: t('packages.legacyTitle'),
       who: t('packages.legacyWho'),
       price: t('packages.legacyPrice'),
+      sats: formatSats(parseUsd(t('packages.legacyPrice'))),
       features: [1, 2, 3, 4, 5, 6].map((i) => t(`packages.legacyFeature${i}`)),
       included: [t('packages.legacyFeature7')],
       cta: t('packages.legacyCta')
@@ -78,7 +82,7 @@
   ])
 
   const continuity = computed(() =>
-    ['essential', 'advanced', 'premium'].map((k) => ({
+    ['essential', 'advanced'].map((k) => ({
       name: t(`home.fees.${k}`),
       desc: t(`home.fees.${k}Desc`),
       fee: t(`home.fees.${k}Fee`)
@@ -288,6 +292,7 @@
             <h3 :id="`pk-${tier.key}`">{{ tier.title }}</h3>
             <p class="who">{{ tier.who }}</p>
             <p class="price"><b>{{ tier.price }}</b><span>{{ t('packages.oneTime') }}</span></p>
+            <p class="sats">{{ tier.sats }}</p>
             <ul>
               <li v-for="f in tier.features" :key="f">{{ f }}</li>
               <li v-for="f in tier.included" :key="f" class="inc">{{ f }}</li>
@@ -328,6 +333,7 @@
             <p class="sp-label">{{ t('home.fees.contLabel') }}</p>
             <h3>{{ t('home.fees.contTitle') }}</h3>
             <p>{{ t('home.fees.contBody') }}</p>
+            <p class="incl">{{ t('home.fees.contIncludes') }}</p>
           </div>
           <div class="sp-fade" style="--d: 0.12s">
             <table>

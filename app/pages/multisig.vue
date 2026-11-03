@@ -49,7 +49,7 @@
       : 'Request a private consultation'
   )
   const ctaSecondary = computed(() =>
-    isEs.value ? 'Ver el paquete Legado' : 'See the Legacy package'
+    isEs.value ? 'Ver los servicios y tarifas' : 'See engagements and fees'
   )
 
   useSeoMeta({
@@ -177,8 +177,9 @@
           A multi-vendor multisig vault is the most robust way a family can hold
           Bitcoin: several keys, on hardware from independent manufacturers,
           kept in separate locations, with a written protocol for how they are
-          used and inherited. It is what we build in our Legacy engagement, and
-          it is the part of this work we have chosen to specialise in. This page
+          used and inherited. We build it as a 2-of-3 in our Family engagement
+          and as a bespoke structure in Legacy, and it is the part of this work
+          we have chosen to specialise in. This page
           explains what it is, why the multi-vendor detail matters more than
           most people realise, and why the setup is worth doing properly or not
           at all.
@@ -326,7 +327,7 @@
           verifying, recovering. Then we rehearse the scenario that matters —
           recovering access without you in the room. A recovery that has never
           been rehearsed is a hope, not a plan. From there, the annual review
-          under Premium Continuity keeps the vault current as devices, family,
+          under your Continuity Plan keeps the vault current as devices, family,
           and circumstances change.
         </p>
 
@@ -339,17 +340,18 @@
           Vault. The multi-vendor multisig vault is how the Vault layer — the
           long-term patrimony, the portion measured in generations — should be
           held once a family's position is meaningful enough that its loss would
-          be unrecoverable. It is the centrepiece of our
-          <NuxtLink :to="localePath('/') + '#packages'">
-            Legacy engagement
-          </NuxtLink>
-          , and it is maintained through an annual in-person review and recovery
-          rehearsal.
+          be unrecoverable. For most families that means a 2-of-3, the
+          centrepiece of our
+          <NuxtLink :to="localePath('/') + '#engagements'">Family engagement</NuxtLink>.
         </p>
         <p>
-          If your position is earlier in its journey, the Foundation and Family
-          engagements build the same discipline at the right scale — and the
-          free assessment will tell you honestly which is appropriate.
+          Where Bitcoin is held through a family business, holding company or
+          family office, with several people signing, our Legacy engagement
+          designs a larger quorum, optional time-delayed recovery and a written
+          signing policy, maintained through an annual in-person review and
+          recovery rehearsal. If your position is earlier in its journey, the
+          Foundation engagement builds the same discipline on a single key, and
+          the free assessment will tell you honestly which is appropriate.
         </p>
 
         <h2>Frequently asked questions</h2>
@@ -383,7 +385,8 @@
           una familia puede custodiar Bitcoin: varias llaves, en hardware de
           fabricantes independientes, guardadas en ubicaciones separadas, con un
           protocolo escrito sobre cómo se usan y cómo se heredan. Es lo que
-          construimos en nuestro paquete Legado, y es la parte de este trabajo
+          construimos como un 2 de 3 en nuestro paquete Familia y como una
+          estructura a medida en Legado, y es la parte de este trabajo
           en la que hemos decidido especializarnos. Esta página explica qué es,
           por qué el detalle multi-fabricante importa más de lo que la mayoría
           cree, y por qué esta configuración merece hacerse correctamente o no
@@ -540,7 +543,7 @@
           firmar, verificar, recuperar. Después ensayamos el escenario que
           importa — recuperar el acceso sin ti en la sala. Una recuperación que
           nunca se ha ensayado es una esperanza, no un plan. A partir de ahí, la
-          revisión anual bajo Continuidad Premium mantiene la bóveda al día
+          revisión anual de tu Plan de Continuidad mantiene la bóveda al día
           conforme cambian los dispositivos, la familia y las circunstancias.
         </p>
 
@@ -553,18 +556,20 @@
           La bóveda multisig multi-fabricante es como debería custodiarse la
           capa de Bóveda — el patrimonio de largo plazo, la porción que se mide
           en generaciones — una vez que la posición de una familia es lo
-          bastante significativa como para que su pérdida sea irrecuperable. Es
-          la pieza central de nuestro
-          <NuxtLink :to="localePath('/') + '#packages'">
-            paquete Legado
-          </NuxtLink>
-          , y se mantiene mediante una revisión anual presencial con ensayo de
-          recuperación.
+          bastante significativa como para que su pérdida sea irrecuperable.
+          Para la mayoría de las familias eso significa un 2 de 3, la pieza
+          central de nuestro
+          <NuxtLink :to="localePath('/') + '#engagements'">paquete Familia</NuxtLink>.
         </p>
         <p>
-          Si tu posición está más temprano en su camino, los paquetes Fundación
-          y Familia construyen la misma disciplina a la escala adecuada — y la
-          evaluación gratuita te dirá con honestidad cuál corresponde.
+          Cuando el Bitcoin se mantiene a través de una empresa familiar, una
+          sociedad patrimonial o un family office, con varias personas firmando,
+          nuestro paquete Legado diseña un quórum mayor, recuperación opcional
+          con retardo temporal y una política de firma por escrito, mantenidos
+          mediante una revisión anual presencial con ensayo de recuperación. Si
+          tu posición está más temprano en su camino, el paquete Fundación
+          construye la misma disciplina sobre una sola llave, y la evaluación
+          gratuita te dirá con honestidad cuál corresponde.
         </p>
 
         <h2>Preguntas frecuentes</h2>
@@ -605,7 +610,7 @@
             {{ ctaButton }}
           </UiButton>
           <NuxtLink
-            :to="localePath('/') + '#packages'"
+            :to="localePath('/') + '#engagements'"
             class="text-sm text-muted-foreground transition-colors hover:text-white"
           >
             {{ ctaSecondary }} →

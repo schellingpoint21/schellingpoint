@@ -33,7 +33,7 @@
             </li>
             <li>
               <NuxtLink
-                to="#packages"
+                :to="localePath('/') + '#engagements'"
                 class="text-sm text-muted-foreground transition-colors hover:text-white"
               >
                 {{ t('nav.packages') }}
