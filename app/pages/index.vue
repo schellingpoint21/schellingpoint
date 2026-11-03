@@ -84,7 +84,7 @@
   ])
 
   const continuity = computed(() =>
-    ['essential', 'advanced', 'premium'].map((k) => ({
+    ['essential', 'advanced'].map((k) => ({
       name: t(`home.fees.${k}`),
       desc: t(`home.fees.${k}Desc`),
       fee: t(`home.fees.${k}Fee`)
@@ -387,6 +387,7 @@
             <p class="sp-label">{{ t('home.fees.contLabel') }}</p>
             <h3>{{ t('home.fees.contTitle') }}</h3>
             <p>{{ t('home.fees.contBody') }}</p>
+            <p class="incl">{{ t('home.fees.contIncludes') }}</p>
           </div>
           <div class="sp-fade" style="--d: 0.12s">
             <table>
@@ -858,6 +859,7 @@
 @media (min-width:900px){.sp-fees .cont{grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:var(--sp-gutter)}}
 .sp-fees .cont h3{font-size:1.4rem;margin:.9rem 0 0}
 .sp-fees .cont .intro p{color:var(--sp-mute);margin:.7rem 0 0;max-width:22rem}
+.sp-fees .cont .intro p.incl{margin-top:1.2rem;padding-top:1.2rem;border-top:1px solid var(--sp-rule);font-size:.9rem;line-height:1.6}
 .sp-fees table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums lining-nums}
 .sp-fees th,.sp-fees td{text-align:left;padding:1.15rem 0;border-bottom:1px solid var(--sp-rule);vertical-align:baseline}
 .sp-fees thead th{padding-top:0}
