@@ -105,6 +105,8 @@ export default defineNuxtConfig({
   sitemap: {
     // Page routes auto-discovered; blog posts registered via asSitemapCollection in content.config.ts.
     // hreflang alternates emitted automatically via @nuxtjs/i18n integration.
+    // Dynamic routes are not auto-discovered; list case studies explicitly.
+    urls: ['/case-studies/lightning-news', '/es/case-studies/lightning-news'],
     autoLastmod: true,
     xsl: false
   },

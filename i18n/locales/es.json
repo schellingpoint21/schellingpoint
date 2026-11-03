@@ -10,6 +10,7 @@
     "faq": "Preguntas",
     "resources": "Recursos",
     "blog": "Blog",
+    "caseStudies": "Casos de estudio",
     "getStarted": "Comenzar"
   },
   "hero": {
@@ -403,7 +404,8 @@
       "estatePlanning": "Planificación patrimonial Bitcoin",
       "multisig": "Multifirma",
       "blog": "Blog",
-      "playbook": "El Manual del Patrimonio Bitcoin"
+      "playbook": "El Manual del Patrimonio Bitcoin",
+      "caseStudies": "Casos de estudio"
     }
   }
 }
