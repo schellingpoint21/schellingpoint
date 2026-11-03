@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { getCaseStudy } from '~/lib/case-studies'
 
-  const BOOKING_URL = 'https://calendly.com/charlie-schellingpoint-jwgf/30min'
+  const { BOOKING_URL } = useSpContact()
 
   const route = useRoute()
   const { locale } = useI18n()
