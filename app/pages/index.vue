@@ -103,7 +103,7 @@
     { img: '/images/tools/passport.png', name: 'Passport', role: t('home.tools.signingDevice') },
     { img: '/images/tools/jade.png', name: 'Jade', role: t('home.tools.signingDevice') },
     { img: '/images/tools/nunchuk.png', name: 'Nunchuk', role: t('home.tools.multisigWallet') },
-    { img: '/images/tools/liana.png', name: 'Liana', role: t('home.tools.timeDelayed') },
+    { img: '/images/tools/liana.svg', name: 'Liana', role: t('home.tools.timeDelayed') },
     { img: '/images/tools/signal.svg', name: 'Signal', role: t('home.tools.privateComms') }
   ])
 
